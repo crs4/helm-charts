@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "flink.fullname" . }}-taskmanager
+  labels:
+    app: {{ include "flink.name" . }}-taskmanager
+    chart: {{ include "flink.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.taskmanager.service }}
+  ports:
+    - name: rpc
+      port: {{ .Values.conf.taskmanager__rpc__port | default 6121 }}
+    - name: data
+      port: {{ .Values.conf.taskmanager__data__port | default 6122 }}
+
+  selector:
+    app: {{ include "flink.name" . }}-taskmanager
+    release: {{ .Release.Name }}
+

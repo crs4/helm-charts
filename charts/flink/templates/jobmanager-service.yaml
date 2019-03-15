@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "flink.fullname" . }}-jobmanager
+  labels:
+    app: {{ include "flink.name" . }}-jobmanager
+    chart: {{ include "flink.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.jobmanager.service }}
+  ports:
+    - port: {{ .Values.conf.web__port }}
+      name: web
+    - port: {{ .Values.conf.jobmanager__rpc__port }}
+      name: rpc
+    - port: {{ .Values.conf.blob__server__port }}
+      name: blob
+    - port: {{ .Values.conf.query__server__port }}
+      name: query
+
+  selector:
+    app: {{ include "flink.name" . }}-jobmanager
+    release: {{ .Release.Name }}
+
