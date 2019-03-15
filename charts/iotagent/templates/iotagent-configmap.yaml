@@ -1,0 +1,68 @@
+apiVersion: v1
+data:
+  config.js: |
+    /*
+     * Copyright 2015 Telefonica Investigación y Desarrollo, S.A.U
+     *
+     * This file is part of iotagent-json
+     *
+     * iotagent-json is free software: you can redistribute it and/or
+     * modify it under the terms of the GNU Affero General Public License as
+     * published by the Free Software Foundation, either version 3 of the License,
+     * or (at your option) any later version.
+     *
+     * iotagent-json is distributed in the hope that it will be useful,
+     * but WITHOUT ANY WARRANTY; without even the implied warranty of
+     * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+     * See the GNU Affero General Public License for more details.
+     *
+     * You should have received a copy of the GNU Affero General Public
+     * License along with iotagent-json.
+     * If not, seehttp://www.gnu.org/licenses/.
+     *
+     * For those usages not covered by the GNU Affero General Public License
+     * please contact with::[contacto@tid.es]
+     */
+    var config = {};
+
+    config.mqtt = {
+        host: '{{ required "A mqtt host is required"  .Values.mqtt.host }}',
+        port: {{ required "A mqtt port is required"  .Values.mqtt.port }},
+        defaultKey: '{{ required "A mqtt defaultKey is required"  .Values.mqtt.defaultKey }}',
+        thinkingThingsPlugin: {{ default true .Values.mqtt.thinkingThingsPlugin }},
+        keepalive: {{ default 5 .Values.mqtt.keepalive }},
+        username: {{ required "A mqtt username is required"  .Values.mqtt.username | quote }},
+        password: {{ required "A mqtt password is required"  .Values.mqtt.password | quote  }}
+    };
+
+    config.iota = {
+        logLevel: 'DEBUG',
+        contextBroker: {
+            host: '{{ .Release.Name }}-orion',
+            port: '1026'
+        },
+        server: {
+            port: 4041
+        },
+        deviceRegistry: {
+            type: 'mongodb'
+        },
+        mongodb: {
+            host: '{{ .Release.Name }}-mongodb',
+            port: '27017',
+            db: 'iotagent'
+        },
+        types: {},
+        service: 'howtoService',
+        subservice: '/howto',
+        providerUrl: 'http://iotagent:4041',
+        deviceRegistrationDuration: 'P1M',
+        defaultType: 'Thing',
+        timestamp: true
+    };
+
+    module.exports = config;
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-iotagent-configmap
+  namespace: default
