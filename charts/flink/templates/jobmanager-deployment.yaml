@@ -1,0 +1,41 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ include "flink.fullname" . }}-jobmanager
+  labels:
+    app: {{ include "flink.name" . }}-jobmanager
+    chart: {{ include "flink.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "flink.name" . }}-jobmanager
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "flink.name" . }}-jobmanager
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+{{- $_ := set .Values "command_arg" "jobmanager" }}
+{{ include "flink.command" . | indent 10 }}
+          ports:
+            - name: web
+              containerPort: {{ .Values.conf.web__port | default 8081 }}
+            - name: rpc
+              containerPort: {{ .Values.conf.jobmanager__rpc__port | default 6123}}
+            - name: blob
+              containerPort: {{ .Values.conf.blob__server__port | default 6124}}
+            - name: query
+              containerPort: {{ .Values.conf.query__server__port | default 6125 }}
+          env:
+            - name: JOB_MANAGER_RPC_ADDRESS
+              value: {{ include "flink.fullname" . }}-jobmanager
+{{ include "flink.volumeMounts" . | indent 10 }}
+{{ include "flink.volumes" . | indent 6 }}

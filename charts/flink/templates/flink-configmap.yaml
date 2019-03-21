@@ -1,0 +1,12 @@
+{{- if .Values.conf }}
+apiVersion: v1
+data:
+  flink-conf.yaml: |
+    jobmanager.rpc.address: {{ .Release.Name }}-flink-jobmanager
+{{ .Values.conf | toYaml |  replace "__" "." | indent 4 }}
+
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-flink-configmap
+  namespace: default
+{{- end }}

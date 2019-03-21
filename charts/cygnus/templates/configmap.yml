@@ -1,0 +1,18 @@
+{{ if or (.Values.conf.agentConf) (.Values.conf.flumeEnv) }}
+apiVersion: v1
+data:
+{{- if .Values.conf.agentConf }}
+  agent.conf: |+
+{{ tpl .Values.conf.agentConf . | indent 4 }}
+{{- end }}
+
+{{- if .Values.conf.flumeEnv }}
+  flume-env.sh: |+
+{{ .Values.conf.flumeEnv | indent 4 }}
+{{- end }}
+
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+  namespace: default
+{{- end }}
