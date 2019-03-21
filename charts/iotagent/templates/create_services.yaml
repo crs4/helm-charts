@@ -25,7 +25,7 @@ spec:
       restartPolicy: Never
       containers:
       - name: post-install-job
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         image: "crs4/init-fiware"
         args:
           - {{ required "services.git_repo is required"  .Values.services.git_repo }}
