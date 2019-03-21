@@ -9,10 +9,10 @@ image:
   tag: 1.4.2
   pullPolicy: IfNotPresent
 
-#in conf key, replace "." with "__" 
+#in conf key, replace "." with "__"
 conf:
-
-
+  taskmanager__rpc__port:
+  taskmanager__data__port:
 ingress:
   enabled: false
   annotations: {}
