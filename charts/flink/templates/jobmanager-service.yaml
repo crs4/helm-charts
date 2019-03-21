@@ -10,13 +10,13 @@ metadata:
 spec:
   type: {{ .Values.jobmanager.service }}
   ports:
-    - port: {{ .Values.conf.web__port }}
+    - port: {{ .Values.conf.web__port | default 8081 }}
       name: web
-    - port: {{ .Values.conf.jobmanager__rpc__port }}
+    - port: {{ .Values.conf.jobmanager__rpc__port | default 6123 }}
       name: rpc
-    - port: {{ .Values.conf.blob__server__port }}
+    - port: {{ .Values.conf.blob__server__port | default 6124}}
       name: blob
-    - port: {{ .Values.conf.query__server__port }}
+    - port: {{ .Values.conf.query__server__port | default 6125 }}
       name: query
 
   selector:
