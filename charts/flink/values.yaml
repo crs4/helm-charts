@@ -50,3 +50,5 @@ jobmanager:
 taskmanager:
   service: ClusterIP
 
+extraVolumes: []
+extraVolumeMounts: []

@@ -36,13 +36,19 @@ volumes:
   - name: flink-conf
     configMap:
       name: {{ .Release.Name }}-flink-configmap
-{{ end }}
+{{- if .Values.extraVolumes }}
+{{ tpl ( .Values.extraVolumes | toYaml | indent 2) . }}
+{{- end }}
+{{- end }}
 
 {{- define "flink.volumeMounts" -}}
 volumeMounts:
   - name: flink-conf
     mountPath: /tmp/conf
-{{ end }}
+{{- if .Values.extraVolumeMounts }}
+{{ tpl ( .Values.extraVolumeMounts | toYaml | indent 2) . }}
+{{- end }}
+{{- end }}
 
 {{- define "flink.command" -}}
 command:
