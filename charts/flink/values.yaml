@@ -52,3 +52,4 @@ taskmanager:
 
 extraVolumes: []
 extraVolumeMounts: []
+env: [] # list of name, value
