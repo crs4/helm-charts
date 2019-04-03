@@ -30,8 +30,6 @@ spec:
               containerPort: {{ .Values.conf.taskmanager__rpc__port | default 6121 }}
             - name: data
               containerPort: {{ .Values.conf.taskmanager__data__port | default 6122 }}
-          env:
-          - name: JOB_MANAGER_RPC_ADDRESS
-            value: {{ include "flink.fullname" . }}-jobmanager
+{{- include "flink.env" . | indent 10 }}
 {{ include "flink.volumeMounts" . | indent 10 }}
 {{ include "flink.volumes" . | indent 6 }}

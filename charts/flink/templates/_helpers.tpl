@@ -59,3 +59,12 @@ command:
     /docker-entrypoint.sh {{ .Values.command_arg }}
 
 {{ end }}
+
+{{- define "flink.env" }}
+env:
+  - name: JOB_MANAGER_RPC_ADDRESS
+    value: {{ include "flink.fullname" . }}-jobmanager
+{{- if .Values.env }}
+{{ .Values.env | toYaml | indent 2 }}
+{{- end }}
+{{- end }}
