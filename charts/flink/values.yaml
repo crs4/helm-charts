@@ -50,3 +50,6 @@ jobmanager:
 taskmanager:
   service: ClusterIP
 
+extraVolumes: []
+extraVolumeMounts: []
+env: [] # list of name, value

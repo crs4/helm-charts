@@ -36,13 +36,19 @@ volumes:
   - name: flink-conf
     configMap:
       name: {{ .Release.Name }}-flink-configmap
-{{ end }}
+{{- if .Values.extraVolumes }}
+{{ tpl ( .Values.extraVolumes | toYaml | indent 2) . }}
+{{- end }}
+{{- end }}
 
 {{- define "flink.volumeMounts" -}}
 volumeMounts:
   - name: flink-conf
     mountPath: /tmp/conf
-{{ end }}
+{{- if .Values.extraVolumeMounts }}
+{{ tpl ( .Values.extraVolumeMounts | toYaml | indent 2) . }}
+{{- end }}
+{{- end }}
 
 {{- define "flink.command" -}}
 command:
@@ -53,3 +59,12 @@ command:
     /docker-entrypoint.sh {{ .Values.command_arg }}
 
 {{ end }}
+
+{{- define "flink.env" }}
+env:
+  - name: JOB_MANAGER_RPC_ADDRESS
+    value: {{ include "flink.fullname" . }}-jobmanager
+{{- if .Values.env }}
+{{ .Values.env | toYaml | indent 2 }}
+{{- end }}
+{{- end }}

@@ -34,8 +34,6 @@ spec:
               containerPort: {{ .Values.conf.blob__server__port | default 6124}}
             - name: query
               containerPort: {{ .Values.conf.query__server__port | default 6125 }}
-          env:
-            - name: JOB_MANAGER_RPC_ADDRESS
-              value: {{ include "flink.fullname" . }}-jobmanager
+{{- include "flink.env" . | indent 10 }}
 {{ include "flink.volumeMounts" . | indent 10 }}
 {{ include "flink.volumes" . | indent 6 }}
