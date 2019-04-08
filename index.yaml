@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   cygnus:
   - appVersion: 1.9.0
-    created: 2019-03-28T14:58:23.003409376+01:00
+    created: 2019-04-08T11:36:32.932222466+02:00
     description: Cygnus is a Fiware connector in charge of persisting certain sources
       of data in certain configured third-party storages, creating a historical view
       of such data.
@@ -17,7 +17,7 @@ entries:
   drill:
   - apiVersion: v1
     appVersion: 1.14.0
-    created: 2019-03-28T14:58:23.003645881+01:00
+    created: 2019-04-08T11:36:32.932480172+02:00
     description: 'Drill: a Schema-free SQL Query Engine for Hadoop, NoSQL and Cloud
       Storage'
     digest: ea75abe46afee2e3a1c24b55607cdecfc42ed5cd8d1ac0770b2f7c75ced2fb11
@@ -28,7 +28,17 @@ entries:
   flink:
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-03-28T14:58:23.003878182+01:00
+    created: 2019-04-08T11:36:32.932966203+02:00
+    description: Apache Flink is an open source stream processing framework developed
+      by the Apache Software Foundation.
+    digest: 54ebb6a16ad51efa8adc0d6b246ed8c1dcffe2ac8af0b98088f4a28a2768fb80
+    name: flink
+    urls:
+    - https://crs4.github.io/helm-charts/flink-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: 1.4.2
+    created: 2019-04-08T11:36:32.932714363+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 4938399e7e4f4634dbaa6c9cae92cfbbabe258aff776cc18b114217ad78b84c5
@@ -39,7 +49,7 @@ entries:
   hadoop:
   - apiVersion: v1
     appVersion: 2.7.3
-    created: 2019-03-28T14:58:23.004394634+01:00
+    created: 2019-04-08T11:36:32.93350706+02:00
     description: The Apache Hadoop software library is a framework that allows for
       the distributed processing of large data sets across clusters of computers using
       simple programming models.
@@ -57,7 +67,7 @@ entries:
     version: 1.0.8
   hdfs-client-k8s:
   - apiVersion: v1
-    created: 2019-03-28T14:58:23.004494057+01:00
+    created: 2019-04-08T11:36:32.933609856+02:00
     description: A client for HDFS on Kubernetes.
     digest: 261f951f732a8a2d73da107eea20c64c0f4a861722919f02ea70e410a777c25a
     name: hdfs-client-k8s
@@ -67,7 +77,7 @@ entries:
   hdfs-config-k8s:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-28T14:58:23.004651865+01:00
+    created: 2019-04-08T11:36:32.933768501+02:00
     description: A Helm chart for configuring HDFS on Kubernetes
     digest: 256d8790ccaf9bbf7fce5b4a8188ab816b3ec77136d78f0d7620a4ceaeeb5d19
     name: hdfs-config-k8s
@@ -76,7 +86,7 @@ entries:
     version: 0.1.0
   hdfs-datanode-k8s:
   - apiVersion: v1
-    created: 2019-03-28T14:58:23.004784536+01:00
+    created: 2019-04-08T11:36:32.933899886+02:00
     description: Datanodes for HDFS on Kubernetes.
     digest: 4eaa3b30fa3558180965a23bc61bf8a1026c01f24f26430621fa55ea71330d6e
     name: hdfs-datanode-k8s
@@ -85,7 +95,7 @@ entries:
     version: 0.1.0
   hdfs-journalnode-k8s:
   - apiVersion: v1
-    created: 2019-03-28T14:58:23.004908736+01:00
+    created: 2019-04-08T11:36:32.934025666+02:00
     description: Journalnode quorum used by HDFS on Kubernetes.
     digest: f0dc901e4f7ac9145e93355b33fc2c808ba7990d608dcfa87d6a8b9bfcf78afd
     name: hdfs-journalnode-k8s
@@ -95,7 +105,7 @@ entries:
   hdfs-k8s:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-28T14:58:23.00597314+01:00
+    created: 2019-04-08T11:36:32.935089874+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 297d0fb716efa86cc3aeb63ca32891d64dd71efa2eaf5a33f4bd0a3a02bad87d
     name: hdfs-k8s
@@ -104,7 +114,7 @@ entries:
     version: 0.1.0
   hdfs-krb5-k8s:
   - apiVersion: v1
-    created: 2019-03-28T14:58:23.006092597+01:00
+    created: 2019-04-08T11:36:32.935212297+02:00
     description: Kerberos server that can be used for HDFS on Kubernetes.
     digest: dcd248b7b645e013f23889f62384c9ed11c31eeb34e2d44ad001d94f9ed7501a
     name: hdfs-krb5-k8s
@@ -113,7 +123,7 @@ entries:
     version: 0.1.0
   hdfs-namenode-k8s:
   - apiVersion: v1
-    created: 2019-03-28T14:58:23.006262456+01:00
+    created: 2019-04-08T11:36:32.935398245+02:00
     description: namenodes in HDFS on Kubernetes.
     digest: 84ffb49fb2532174eccef524008b783d6e22ec98a8f4f12deee247b7021b32cc
     name: hdfs-namenode-k8s
@@ -122,7 +132,7 @@ entries:
     version: 0.1.0
   hdfs-simple-namenode-k8s:
   - apiVersion: v1
-    created: 2019-03-28T14:58:23.006365598+01:00
+    created: 2019-04-08T11:36:32.935509703+02:00
     description: Non-HA namenode for HDFS on Kubernetes.
     digest: 58238d92e46ac5a98ccf465fefadbf44b8aff3551f5b60ebd42ffc3571061003
     name: hdfs-simple-namenode-k8s
@@ -132,7 +142,7 @@ entries:
   iotagent:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-03-28T14:58:23.006711061+01:00
+    created: 2019-04-08T11:36:32.935798329+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 9510002cea77b66ca7ee76710feeee77335feca397c5f34f724bc503836938fe
@@ -142,7 +152,7 @@ entries:
     version: 0.1.0
   jupyterhub:
   - appVersion: 0.9.4
-    created: 2019-03-28T14:58:23.008202928+01:00
+    created: 2019-04-08T11:36:32.937022502+02:00
     description: Multi-user Jupyter installation
     digest: ad78dc1e6876a79efb36a83ca81caf69fed1821314f67dee66011fdf3b567f5e
     home: https://z2jh.jupyter.org
@@ -159,7 +169,7 @@ entries:
   orion:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: 2019-03-28T14:58:23.008671025+01:00
+    created: 2019-04-08T11:36:32.93776247+02:00
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: 06f61cc126f357daba4555d96a15416abb175cec9b3014625ff87afe6253ff16
@@ -167,4 +177,4 @@ entries:
     urls:
     - https://crs4.github.io/helm-charts/orion-0.1.0.tgz
     version: 0.1.0
-generated: 2019-03-28T14:58:23.003103646+01:00
+generated: 2019-04-08T11:36:32.931924586+02:00
