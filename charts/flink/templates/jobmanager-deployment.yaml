@@ -27,13 +27,15 @@ spec:
 {{ include "flink.command" . | indent 10 }}
           ports:
             - name: web
-              containerPort: {{ .Values.conf.web__port | default 8081 }}
+              containerPort: {{ index .Values.conf "web.port" }}
             - name: rpc
-              containerPort: {{ .Values.conf.jobmanager__rpc__port | default 6123}}
+              containerPort: {{ index .Values.conf "jobmanager.rpc.port" }}
             - name: blob
-              containerPort: {{ .Values.conf.blob__server__port | default 6124}}
+              containerPort: {{ index .Values.conf "blob.server.port" }}
             - name: query
-              containerPort: {{ .Values.conf.query__server__port | default 6125 }}
+              containerPort: {{ index .Values.conf "query.server.port" }}
+            - name: ha
+              containerPort: {{ index .Values.conf "high-availability.jobmanager.port" }}
 {{- include "flink.env" . | indent 10 }}
 {{ include "flink.volumeMounts" . | indent 10 }}
 {{ include "flink.volumes" . | indent 6 }}

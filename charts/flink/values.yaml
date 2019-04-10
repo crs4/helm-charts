@@ -9,10 +9,15 @@ image:
   tag: 1.4.2
   pullPolicy: IfNotPresent
 
-#in conf key, replace "." with "__"
 conf:
-  taskmanager__rpc__port:
-  taskmanager__data__port:
+  taskmanager.rpc.port: 6121
+  taskmanager.data.port: 6122
+  web.port: 8081
+  jobmanager.rpc.port: 6123
+  blob.server.port: 6124
+  query.server.port: 6125
+  high-availability.jobmanager.port: 50010
+
 ingress:
   enabled: false
   annotations: {}

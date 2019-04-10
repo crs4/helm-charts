@@ -11,9 +11,9 @@ spec:
   type: {{ .Values.taskmanager.service }}
   ports:
     - name: rpc
-      port: {{ .Values.conf.taskmanager__rpc__port | default 6121 }}
+      port: {{ index .Values.conf "taskmanager.rpc.port"  }}
     - name: data
-      port: {{ .Values.conf.taskmanager__data__port | default 6122 }}
+      port: {{ index .Values.conf "taskmanager.data.port" }}
 
   selector:
     app: {{ include "flink.name" . }}-taskmanager
