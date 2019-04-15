@@ -16,6 +16,9 @@ service:
   type: ClusterIP
   port: 1026
 
+mongodb:
+  url:
+
 subscriptions:
 #  git_repo: repo containing subscriptions yaml
 #  git_branch:
