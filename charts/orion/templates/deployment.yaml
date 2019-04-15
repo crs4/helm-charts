@@ -23,7 +23,7 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          args: ["-dbhost", "{{ .Release.Name }}-mongodb"]
+          args: ["-dbhost", "{{ tpl .Values.mongodb.url . }}"]
           ports:
             - name: http
               protocol: TCP
