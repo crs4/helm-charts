@@ -31,7 +31,7 @@ spec:
           - {{ required "services.git_repo is required"  .Values.services.git_repo }}
           - {{ required "services.git_branch is required" .Values.services.git_branch }}
           - {{ required "services.items_path is required"  .Values.services.items_path }}
-          - {{ include "orion.fullname" . }}:{{ .Values.service.port }}/iot/services
+          - {{ include "iotagent.fullname" . }}:{{ .Values.service.port }}/iot/services
 {{- if .Values.services.env }}
         env:
 {{ tpl ( .Values.services.env | toYaml  ) . | indent 10 }}
