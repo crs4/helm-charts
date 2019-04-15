@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: 2.0.0
 description: Orion is a C++ implementation of the NGSIv2 REST API binding developed as a part of the FIWARE platform.
 name: orion
-version: 0.1.0
+version: 0.1.1
