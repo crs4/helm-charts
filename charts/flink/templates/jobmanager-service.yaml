@@ -10,16 +10,16 @@ metadata:
 spec:
   type: {{ .Values.jobmanager.service }}
   ports:
-    - port: {{ index .Values.ports "web.port" }}
+    - port: {{ index .Values.conf "web.port" }}
       name: web
-    - port: {{ index .Values.ports "jobmanager.rpc.port" }}
+    - port: {{ index .Values.conf "jobmanager.rpc.port" }}
       name: rpc
-    - port: {{ index .Values.ports "blob.server.port" }}
+    - port: 6124
       name: blob
-    - port: {{ index .Values.ports "query.server.port" }}
+    - port: 6125
       name: query
     - name: ha
-      port: {{ index .Values.ports "high-availability.jobmanager.port" }}
+      port: {{ index .Values.conf "high-availability.jobmanager.port" }}
   selector:
     app: {{ include "flink.name" . }}-jobmanager
     release: {{ .Release.Name }}

@@ -17,6 +17,5 @@ Flink has been designed to run in all common cluster environments, perform compu
 | `image.pullPolicy`      |                                                       | `IfNotPresent`   |
 | `service`               |                                                       | `ClusterIP`      |
 | `resources`             | Resource requests & limits                            | `{}`             |
-| `conf`                  | the flink-conf.yaml, excluded ports (defined in `ports`)  |              |
-| `ports`                 | flink ports                                          |                  |
+| `conf`                  | the flink-conf.yaml                                   |                  |
 
