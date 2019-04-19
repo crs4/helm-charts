@@ -17,5 +17,6 @@ Flink has been designed to run in all common cluster environments, perform compu
 | `image.pullPolicy`      |                                                       | `IfNotPresent`   |
 | `service`               |                                                       | `ClusterIP`      |
 | `resources`             | Resource requests & limits                            | `{}`             |
-| `conf`                  | the flink-conf.yaml, where dot must be replaced to `__` (`double` underscore).For example the job manager `rpc` port can be configured with ``jobmanager`__rpc__port: 6123`                       |                  |
+| `conf`                  | the flink-conf.yaml, excluded ports (defined in `ports`)  |              |
+| `ports`                 | flink ports                                          |                  |
 

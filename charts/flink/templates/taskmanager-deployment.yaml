@@ -27,9 +27,9 @@ spec:
 {{ include "flink.command" . | indent 10 }}
           ports:
             - name: rpc
-              containerPort: {{ index .Values.conf "taskmanager.rpc.port"  }}
+              containerPort: {{ index .Values.ports "taskmanager.rpc.port"  }}
             - name: data
-              containerPort: {{ index .Values.conf "taskmanager.data.port" }}
+              containerPort: {{ index .Values.ports "taskmanager.data.port" }}
 {{- include "flink.env" . | indent 10 }}
 {{ include "flink.volumeMounts" . | indent 10 }}
 {{ include "flink.volumes" . | indent 6 }}
