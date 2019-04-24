@@ -56,7 +56,9 @@ command:
   - "-c"
   - |
     ln -s -f /tmp/conf/flink-conf.yaml /opt/flink/conf
-    /docker-entrypoint.sh {{ .Values.command_arg }}
+    addgroup supergroup
+    adduser  flink supergroup
+    su flink -c "/docker-entrypoint.sh {{ .Values.command_arg }}"
 
 {{ end }}
 
