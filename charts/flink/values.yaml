@@ -57,3 +57,16 @@ taskmanager:
 extraVolumes: []
 extraVolumeMounts: []
 env: [] # list of name, value
+
+job_deploy:
+#  image:
+#    repository: crs4/flink-job-deployer
+#    tag: 0.1.0
+#  savepoint_path: hdfs:///user/flink/states
+#  jobs:
+#    - jar: /path/to/jar
+#      entry_class: className
+#      _id: 7fac27faa76e5a4704b22e40354c0fa6
+#      program_args:
+#        - "--arg"
+#        - "value"

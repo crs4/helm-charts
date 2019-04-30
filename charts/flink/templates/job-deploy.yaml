@@ -1,0 +1,22 @@
+{{- if .Values.job_deploy }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-job-deploy
+spec:
+  template:
+    spec:
+      containers:
+      - name: flink-job-deployer
+        image: {{ .Values.job_deploy.image.repository }}:{{ .Values.job_deploy.image.tag }}
+        imagePullPolicy: {{ .Values.job_deploy.image.pullPolicy | default "Always" }}
+        command:
+          - /entrypoint.py
+          - {{ .Values.job_deploy.jobs | toJson | quote }}
+          - "--jm"
+          - http://{{ include "flink.fullname" . }}-jobmanager:8081
+          - "-s"
+          - {{ .Values.job_deploy.savepoint_path | quote }}
+
+      restartPolicy: Never
+{{- end }}
