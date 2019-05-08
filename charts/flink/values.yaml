@@ -50,9 +50,11 @@ affinity: {}
 
 jobmanager:
   service: ClusterIP
+  replicaCount: 1
 
 taskmanager:
   service: ClusterIP
+  replicaCount: 1
 
 extraVolumes: []
 extraVolumeMounts: []
