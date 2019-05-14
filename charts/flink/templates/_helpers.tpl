@@ -31,8 +31,7 @@ Create chart name and version as used by the chart label.
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
-{{- define "flink.volumes" -}}
-volumes:
+{{- define "flink.volumes" }}
   - name: flink-conf
     configMap:
       name: {{ .Release.Name }}-flink-configmap
@@ -41,8 +40,7 @@ volumes:
 {{- end }}
 {{- end }}
 
-{{- define "flink.volumeMounts" -}}
-volumeMounts:
+{{- define "flink.volumeMounts" }}
   - name: flink-conf
     mountPath: /tmp/conf
 {{- if .Values.extraVolumeMounts }}
@@ -103,7 +101,6 @@ command:
 {{ end }}
 
 {{- define "flink.env" }}
-env:
   - name: JOB_MANAGER_RPC_ADDRESS
     value: {{ include "flink.fullname" . }}-jobmanager
 {{- if .Values.env }}
