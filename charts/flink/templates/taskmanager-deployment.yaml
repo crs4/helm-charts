@@ -30,6 +30,23 @@ spec:
               containerPort: {{ index .Values.conf "taskmanager.rpc.port"  }}
             - name: data
               containerPort: {{ index .Values.conf "taskmanager.data.port" }}
-{{- include "flink.env" . | indent 10 }}
-{{ include "flink.volumeMounts" . | indent 10 }}
-{{ include "flink.volumes" . | indent 6 }}
+          resources:
+            {{- toYaml .Values.taskmanager.resources | nindent 12 }}
+          env:
+            {{- include "flink.env" . | indent 10 }}
+          volumeMounts:
+            {{- include "flink.volumeMounts" . | indent 10 }}
+      {{- with .Values.taskmanager.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.taskmanager.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.taskmanager.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      volumes:
+        {{- include "flink.volumes" . | indent 8 }}

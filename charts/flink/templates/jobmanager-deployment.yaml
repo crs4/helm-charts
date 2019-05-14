@@ -36,6 +36,23 @@ spec:
               containerPort: 6125
             - name: ha
               containerPort: {{ index .Values.conf "high-availability.jobmanager.port" }}
-{{- include "flink.env" . | indent 10 }}
-{{ include "flink.volumeMounts" . | indent 10 }}
-{{ include "flink.volumes" . | indent 6 }}
+          resources:
+            {{- toYaml .Values.jobmanager.resources | nindent 12 }}
+          env:
+            {{- include "flink.env" . | indent 10 }}
+          volumeMounts:
+            {{- include "flink.volumeMounts" . | indent 10 }}
+      {{- with .Values.jobmanager.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.jobmanager.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.jobmanager.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      volumes:
+        {{- include "flink.volumes" . | indent 8 }}
