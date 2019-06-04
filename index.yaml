@@ -14,6 +14,24 @@ entries:
     urls:
     - https://crs4.github.io/helm-charts/cygnus-0.1.0.tgz
     version: 0.1.0
+  datacube-db:
+  - apiVersion: v1
+    appVersion: 11.3.0-1
+    created: 2019-06-04T17:24:22.410240594+02:00
+    description: Chart for TDM's datacube-db.
+    digest: 867373f01fa39cc5d8a6dcf2776a2d2957731ec5d934c7367c17d9d104b545da
+    keywords:
+    - datacube-db
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    name: datacube-db
+    urls:
+    - datacube-db-0.0.1.tgz
+    version: 0.0.1
   drill:
   - apiVersion: v1
     appVersion: 1.14.0
