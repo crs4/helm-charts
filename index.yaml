@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   cygnus:
   - appVersion: 1.9.0
-    created: 2019-05-23T11:02:30.423024728+02:00
+    created: 2019-06-17T10:45:25.912100212+02:00
     description: Cygnus is a Fiware connector in charge of persisting certain sources
       of data in certain configured third-party storages, creating a historical view
       of such data.
@@ -17,7 +17,7 @@ entries:
   datacube-db:
   - apiVersion: v1
     appVersion: 11.3.0-1
-    created: 2019-06-04T17:24:22.410240594+02:00
+    created: 2019-06-17T10:45:25.912857661+02:00
     description: Chart for TDM's datacube-db.
     digest: 867373f01fa39cc5d8a6dcf2776a2d2957731ec5d934c7367c17d9d104b545da
     keywords:
@@ -30,12 +30,12 @@ entries:
     - cluster
     name: datacube-db
     urls:
-    - datacube-db-0.0.1.tgz
+    - https://crs4.github.io/helm-charts/datacube-db-0.0.1.tgz
     version: 0.0.1
   drill:
   - apiVersion: v1
     appVersion: 1.14.0
-    created: 2019-05-23T11:02:30.42325509+02:00
+    created: 2019-06-17T10:45:25.913088015+02:00
     description: 'Drill: a Schema-free SQL Query Engine for Hadoop, NoSQL and Cloud
       Storage'
     digest: ea75abe46afee2e3a1c24b55607cdecfc42ed5cd8d1ac0770b2f7c75ced2fb11
@@ -46,7 +46,7 @@ entries:
   flink:
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-05-23T11:02:30.427256099+02:00
+    created: 2019-06-17T10:45:25.917165783+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: c927f1c12a41cd512aa4cbc0262aafc42556b45e5b629b2cce17d3c0feb703c3
@@ -56,7 +56,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-05-23T11:02:30.426505459+02:00
+    created: 2019-06-17T10:45:25.916772951+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 23fd8e8af3410f074fc9df478c9c4ababbf9c795de22079948f240b00327e3d8
@@ -66,7 +66,7 @@ entries:
     version: 0.6.2
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-05-23T11:02:30.425730024+02:00
+    created: 2019-06-17T10:45:25.916372686+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: ac6a0af24e744a4c2cec413bfaf4a42e80de64cef774ae641b2e9a72199db1fa
@@ -76,7 +76,7 @@ entries:
     version: 0.6.1
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-05-23T11:02:30.424883757+02:00
+    created: 2019-06-17T10:45:25.915967576+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 6d46f148444d560141d27dac585df3080dc32fd2ea89e11b59337aa3fcb60a06
@@ -86,7 +86,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-05-23T11:02:30.424480196+02:00
+    created: 2019-06-17T10:45:25.915159045+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 997b54a65783a3a50a3cb7be291885ece5db7fccccf9406eee4d1391dfe5e44e
@@ -96,7 +96,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-05-23T11:02:30.424239531+02:00
+    created: 2019-06-17T10:45:25.914665185+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 8c3990cf529994e7686f2a61c822032f267e1be3cf50baa28222b7b4bb5c5b31
@@ -106,7 +106,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-05-23T11:02:30.424002476+02:00
+    created: 2019-06-17T10:45:25.914045898+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: a6b9426bb4a1732a069fd80a7927575c561df97e13f1eee04d84e2c6f5657138
@@ -116,7 +116,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-05-23T11:02:30.42375238+02:00
+    created: 2019-06-17T10:45:25.913740678+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 54ebb6a16ad51efa8adc0d6b246ed8c1dcffe2ac8af0b98088f4a28a2768fb80
@@ -126,7 +126,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-05-23T11:02:30.423490394+02:00
+    created: 2019-06-17T10:45:25.913383134+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 4938399e7e4f4634dbaa6c9cae92cfbbabe258aff776cc18b114217ad78b84c5
@@ -137,7 +137,7 @@ entries:
   hadoop:
   - apiVersion: v1
     appVersion: 2.7.3
-    created: 2019-05-23T11:02:30.427802783+02:00
+    created: 2019-06-17T10:45:25.917685615+02:00
     description: The Apache Hadoop software library is a framework that allows for
       the distributed processing of large data sets across clusters of computers using
       simple programming models.
@@ -155,7 +155,7 @@ entries:
     version: 1.0.8
   hdfs-k8s:
   - apiVersion: v1
-    created: 2019-05-23T11:02:30.433323816+02:00
+    created: 2019-06-17T10:45:25.923982451+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: ff36dd21796f883a33fd1ab0ceea75f408db5e92c34fd3814695ad4d9cab91c3
     name: hdfs-k8s
@@ -163,7 +163,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.3.1.tgz
     version: 0.3.1
   - apiVersion: v1
-    created: 2019-05-23T11:02:30.432151+02:00
+    created: 2019-06-17T10:45:25.922833133+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: d682f24173914a598bc0ecb0fc461e5cafdc94985c2564395e00a11062fe7c54
     name: hdfs-k8s
@@ -171,7 +171,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
-    created: 2019-05-23T11:02:30.430976193+02:00
+    created: 2019-06-17T10:45:25.921685483+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 94c5a987a3bc33bb0fb1a40e18b22bf6764812a029b58ac992c63ba4893f3b4d
     name: hdfs-k8s
@@ -179,7 +179,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v1
-    created: 2019-05-23T11:02:30.42993111+02:00
+    created: 2019-06-17T10:45:25.919849276+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 1fe703fe927829474cf282846964e97bd1b427ce0ece4533c4dda8edfcefb55b
     name: hdfs-k8s
@@ -188,7 +188,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-05-23T11:02:30.428875943+02:00
+    created: 2019-06-17T10:45:25.918812948+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 297d0fb716efa86cc3aeb63ca32891d64dd71efa2eaf5a33f4bd0a3a02bad87d
     name: hdfs-k8s
@@ -198,7 +198,7 @@ entries:
   iotagent:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-05-23T11:02:30.434155144+02:00
+    created: 2019-06-17T10:45:25.924518316+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 8e617d0bd261d141a254cbd9f37fea2f7371edd6c02b68f0ef60d1fad2f7eae1
@@ -208,7 +208,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-05-23T11:02:30.433620842+02:00
+    created: 2019-06-17T10:45:25.924254335+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 9510002cea77b66ca7ee76710feeee77335feca397c5f34f724bc503836938fe
@@ -218,7 +218,7 @@ entries:
     version: 0.1.0
   jupyterhub:
   - appVersion: 0.9.4
-    created: 2019-05-23T11:02:30.435787659+02:00
+    created: 2019-06-17T10:45:25.925678387+02:00
     description: Multi-user Jupyter installation
     digest: ad78dc1e6876a79efb36a83ca81caf69fed1821314f67dee66011fdf3b567f5e
     home: https://z2jh.jupyter.org
@@ -235,7 +235,7 @@ entries:
   orion:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: 2019-05-23T11:02:30.436271056+02:00
+    created: 2019-06-17T10:45:25.926159966+02:00
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: e0a5a5b7eb7647775267e7e7f079d7677dd8e48aec35a1734f2b046e3cd512f6
@@ -245,7 +245,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 2.0.0
-    created: 2019-05-23T11:02:30.436032531+02:00
+    created: 2019-06-17T10:45:25.925930958+02:00
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: 06f61cc126f357daba4555d96a15416abb175cec9b3014625ff87afe6253ff16
@@ -253,4 +253,4 @@ entries:
     urls:
     - https://crs4.github.io/helm-charts/orion-0.1.0.tgz
     version: 0.1.0
-generated: 2019-05-23T11:02:30.422718655+02:00
+generated: 2019-06-17T10:45:25.91179059+02:00
