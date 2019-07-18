@@ -33,6 +33,14 @@ spec:
             - name: http
               containerPort: 5050
               protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /v1/version
+              port: 5080
+            initialDelaySeconds: 10
+            periodSeconds: 20
+
+
 {{- if .Values.conf }}
           volumeMounts:
             - name: config-volume
