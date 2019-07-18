@@ -32,6 +32,11 @@ spec:
           - {{ required "services.git_branch is required" .Values.services.git_branch }}
           - {{ required "services.items_path is required"  .Values.services.items_path }}
           - {{ include "iotagent.fullname" . }}:{{ .Values.service.port }}/iot/services
+{{- if .Values.services.resources }}
+        resources:
+{{  .Values.services.resources | toYaml | indent 10 }}
+{{- end }}
+
 {{- if .Values.services.env }}
         env:
 {{ tpl ( .Values.services.env | toYaml  ) . | indent 10 }}
