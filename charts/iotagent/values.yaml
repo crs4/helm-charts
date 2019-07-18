@@ -64,3 +64,13 @@ mqtt:
   port:
   defaultKey:
   thinkingThingsPlugin: true
+
+
+mongodb:
+  host:
+  port: 27017
+
+orion:
+  host:
+  port: 1026
+
