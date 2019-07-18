@@ -38,8 +38,8 @@ data:
     config.iota = {
         logLevel: 'DEBUG',
         contextBroker: {
-            host: '{{ .Values.orion.host }}',
-            port: '{{ .Values.orion.port }}'
+            host: '{{ required "A orion host is required" .Values.orion.host }}',
+            port: '{{ required "A orion port is required" .Values.orion.port }}'
         },
         server: {
             port: 4041
@@ -48,8 +48,8 @@ data:
             type: 'mongodb'
         },
         mongodb: {
-            host: '{{ .Values.mongodb.host }}',
-            port: '{{ .Values.mongodb.port }}',
+            host: '{{ required "A mongodb host is required" .Values.mongodb.host }}',
+            port: '{{ required "A mongodb port is required" .Values.mongodb.port }}',
             db: 'iotagent'
         },
         types: {},
