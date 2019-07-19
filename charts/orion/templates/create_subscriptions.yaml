@@ -32,6 +32,10 @@ spec:
           - {{ .Values.subscriptions.git_branch }}
           - {{ .Values.subscriptions.items_path }}
           - {{ include "orion.fullname" . }}:{{ .Values.service.port }}/v2/subscriptions
+{{- if .Values.subscriptions.resources }}
+        resources:
+{{  .Values.subscriptions.resources | toYaml | indent 10 }}
+{{- end }}
 {{- if .Values.subscriptions.env }}
         env:
 {{ tpl ( .Values.subscriptions.env | toYaml ) . | indent 10 }}
