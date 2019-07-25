@@ -1,0 +1,44 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "cron-job.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "cron-job.name" . }}
+    helm.sh/chart: {{ include "cron-job.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "cron-job.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "cron-job.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+  schedule: {{ .Values.schedule | quote }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: {{ .Chart.Name }}
+              image: "{{ required "a image repository is required" .Values.image.repository }}:{{ .Values.image.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              args:
+                {{- .Values.args | toYaml  | nindent 16 }}
+              resources:
+                {{- toYaml .Values.resources | nindent 18 }}
+          {{- with .Values.nodeSelector }}
+              nodeSelector:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
+            {{- with .Values.affinity }}
+              affinity:
+                {{- toYaml . | nindent 16 }}
+            {{- end }}
+            {{- with .Values.tolerations }}
+              tolerations:
+                {{- toYaml . | nindent 16 }}
+            {{- end }}
