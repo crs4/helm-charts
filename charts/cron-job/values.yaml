@@ -4,17 +4,14 @@
 
 
 image:
-  repository:  busybox
+  repository:
   tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""
 fullnameOverride: ""
 
-args:
- - /bin/sh
- - -c
- - date; echo Hello from the Kubernetes cluster
+args: []
 schedule: "*/1 * * * *"
 
 resources: {}

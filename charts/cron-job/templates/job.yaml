@@ -24,7 +24,7 @@ spec:
           restartPolicy: OnFailure
           containers:
             - name: {{ .Chart.Name }}
-              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              image: "{{ required "a image repository is required" .Values.image.repository }}:{{ .Values.image.tag }}"
               imagePullPolicy: {{ .Values.image.pullPolicy }}
               args:
                 {{- .Values.args | toYaml  | nindent 16 }}
