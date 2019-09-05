@@ -30,3 +30,46 @@ Create chart name and version as used by the chart label.
 {{- define "tdm-ingestion.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{- define "tdm-ingestion.containers" -}}
+- name: {{ .Chart.Name }}
+  image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+  imagePullPolicy: {{ .Values.image.pullPolicy }}
+  args:
+    - {{ .Values.script }}
+    {{- if .Values.debug }}
+    - -d
+    {{- end }}
+    - --tdmq_url
+    - {{ .Values.tdmq_url }}
+  {{- if eq .Values.script  "ckan_ingestion.py" }}
+    - --bucket
+    - {{ .Values.bucket | quote }}
+    - --op
+    - {{ .Values.operation }}
+    - --entity_type
+    - {{ .Values.entity_type }}
+    - --ckan_url
+    - {{ .Values.ckan.url }}
+    - --ckan_api_key
+    - {{ .Values.ckan.api_key }}
+    - --ckan_dataset
+    - {{ .Values.ckan.dataset }}
+    - --ckan_resource
+    - {{ .Values.ckan.resource }}
+    - --time_delta_before
+    - {{ .Values.time_delta_before }}
+    {{- if .Values.upsert }}
+    - --upsert
+    {{- end }}
+  {{- else }}
+    - --bootstrap_server
+    - {{.Values.bootstrap_server }}
+    - --topics
+    - {{ .Values.topics }}
+
+  {{- end }}
+  resources:
+    {{- toYaml .Values.resources | nindent 12 }}
+{{- end -}}
+
