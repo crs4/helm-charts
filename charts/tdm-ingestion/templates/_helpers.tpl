@@ -42,7 +42,7 @@ Create chart name and version as used by the chart label.
     {{- end }}
     - --tdmq_url
     - {{ .Values.tdmq_url }}
-  {{- if eq .Values.script  "ckan_ingestion.py" }}
+  {{- if eq .Values.script  "tdmq_ckan_ingestion.py" }}
     - --bucket
     - {{ .Values.bucket | quote }}
     - --op
