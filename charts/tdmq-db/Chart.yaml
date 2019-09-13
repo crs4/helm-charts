@@ -1,0 +1,13 @@
+apiVersion: v1
+name: tdmq-db
+version: 0.0.1
+appVersion: 11.3.0-1
+description: Chart for TDM's db. It is a customized version of the official PostgreSQL Helm chart.
+keywords:
+- tdmq-db
+- postgresql
+- postgres
+- database
+- sql
+- replication
+- cluster
