@@ -1,5 +1,5 @@
 #
-# Default values for the timescal/timescaledb-postgis and the tdmproject/datacube-db-init images.
+# Default values for the timescal/timescaledb-postgis and the tdmproject/tdmq-db-init images.
 #
 ## Global Docker image parameters
 ## Please, note that this will override the image parameters, including dependencies, configured to use the global value
