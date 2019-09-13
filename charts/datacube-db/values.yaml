@@ -15,9 +15,11 @@ global:
 ## ref: https://hub.docker.com/r/bitnami/postgresql/tags/
 ##
 image:
+  pullPolicy: IfNotPresent
+  debug: true
   registry: docker.io
-  repository: "timescale/timescaledb-postgis"
-  tag: "1.3.0-pg11"
+  repository: &repo tdmproject/tdmq-db
+  tag: &tag dev-172
 
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -38,8 +40,8 @@ image:
 
 migrationsImage:
   registry: docker.io
-  repository: "tdmproject/datacube-db-init"
-  tag: "1.3.0-pg11-1"
+  repository: *repo
+  tag: *tag
 
 migrations:
   enabled: false
