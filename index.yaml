@@ -3,7 +3,7 @@ entries:
   cron-job:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:45.99304808+02:00
+    created: 2020-04-09T16:24:55.73214+02:00
     description: A Helm chart for Kubernetes which runs a cron job
     digest: 3ab003b7ae42c838aed8bdcf17a642d094a8f452bd8febd6aaca2d84d3ea8785
     name: cron-job
@@ -12,7 +12,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:45.992835588+02:00
+    created: 2020-04-09T16:24:55.731338+02:00
     description: A Helm chart for Kubernetes which runs a cron job
     digest: 125a16b9655995aa58b4f4fe5665c3e6782c7e6564f1029cec47de341cab04f4
     name: cron-job
@@ -21,7 +21,7 @@ entries:
     version: 0.1.0
   cygnus:
   - appVersion: 1.9.0
-    created: 2019-09-13T11:50:45.993659869+02:00
+    created: 2020-04-09T16:24:55.736206+02:00
     description: Cygnus is a Fiware connector in charge of persisting certain sources
       of data in certain configured third-party storages, creating a historical view
       of such data.
@@ -34,7 +34,7 @@ entries:
     - https://crs4.github.io/helm-charts/cygnus-0.2.0.tgz
     version: 0.2.0
   - appVersion: 1.9.0
-    created: 2019-09-13T11:50:45.993344475+02:00
+    created: 2020-04-09T16:24:55.732869+02:00
     description: Cygnus is a Fiware connector in charge of persisting certain sources
       of data in certain configured third-party storages, creating a historical view
       of such data.
@@ -49,7 +49,7 @@ entries:
   datacube-db:
   - apiVersion: v1
     appVersion: 11.3.0-1
-    created: 2019-09-13T11:50:45.995115255+02:00
+    created: 2020-04-09T16:24:55.742072+02:00
     description: Chart for TDM's datacube-db.
     digest: 867373f01fa39cc5d8a6dcf2776a2d2957731ec5d934c7367c17d9d104b545da
     keywords:
@@ -67,7 +67,7 @@ entries:
   drill:
   - apiVersion: v1
     appVersion: 1.14.0
-    created: 2019-09-13T11:50:45.9956596+02:00
+    created: 2020-04-09T16:24:55.743856+02:00
     description: 'Drill: a Schema-free SQL Query Engine for Hadoop, NoSQL and Cloud
       Storage'
     digest: ea75abe46afee2e3a1c24b55607cdecfc42ed5cd8d1ac0770b2f7c75ced2fb11
@@ -78,7 +78,7 @@ entries:
   flink:
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-09-13T11:50:45.999510678+02:00
+    created: 2020-04-09T16:24:55.76159+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: c927f1c12a41cd512aa4cbc0262aafc42556b45e5b629b2cce17d3c0feb703c3
@@ -88,7 +88,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-09-13T11:50:45.999034182+02:00
+    created: 2020-04-09T16:24:55.759157+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 23fd8e8af3410f074fc9df478c9c4ababbf9c795de22079948f240b00327e3d8
@@ -98,7 +98,7 @@ entries:
     version: 0.6.2
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-09-13T11:50:45.998612236+02:00
+    created: 2020-04-09T16:24:55.756792+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: ac6a0af24e744a4c2cec413bfaf4a42e80de64cef774ae641b2e9a72199db1fa
@@ -108,7 +108,7 @@ entries:
     version: 0.6.1
   - apiVersion: v1
     appVersion: 1.8.0
-    created: 2019-09-13T11:50:45.99819851+02:00
+    created: 2020-04-09T16:24:55.754668+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 6d46f148444d560141d27dac585df3080dc32fd2ea89e11b59337aa3fcb60a06
@@ -118,7 +118,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-09-13T11:50:45.997756107+02:00
+    created: 2020-04-09T16:24:55.752665+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 997b54a65783a3a50a3cb7be291885ece5db7fccccf9406eee4d1391dfe5e44e
@@ -128,7 +128,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-09-13T11:50:45.997484825+02:00
+    created: 2020-04-09T16:24:55.750874+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 8c3990cf529994e7686f2a61c822032f267e1be3cf50baa28222b7b4bb5c5b31
@@ -138,7 +138,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-09-13T11:50:45.997066331+02:00
+    created: 2020-04-09T16:24:55.749143+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: a6b9426bb4a1732a069fd80a7927575c561df97e13f1eee04d84e2c6f5657138
@@ -148,7 +148,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-09-13T11:50:45.996575197+02:00
+    created: 2020-04-09T16:24:55.747337+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 54ebb6a16ad51efa8adc0d6b246ed8c1dcffe2ac8af0b98088f4a28a2768fb80
@@ -158,7 +158,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: 2019-09-13T11:50:45.996228164+02:00
+    created: 2020-04-09T16:24:55.745544+02:00
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 4938399e7e4f4634dbaa6c9cae92cfbbabe258aff776cc18b114217ad78b84c5
@@ -169,7 +169,7 @@ entries:
   hadoop:
   - apiVersion: v1
     appVersion: 2.7.3
-    created: 2019-09-13T11:50:46.000141944+02:00
+    created: 2020-04-09T16:24:55.763921+02:00
     description: The Apache Hadoop software library is a framework that allows for
       the distributed processing of large data sets across clusters of computers using
       simple programming models.
@@ -187,7 +187,7 @@ entries:
     version: 1.0.8
   hdfs-k8s:
   - apiVersion: v1
-    created: 2019-09-13T11:50:46.007733985+02:00
+    created: 2020-04-09T16:24:55.78489+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 93c78255cf82399cf3ba0e6fa64c040bcecf0c0e54f21e6b8f780b05d40f8081
     name: hdfs-k8s
@@ -195,7 +195,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.4.0.tgz
     version: 0.4.0
   - apiVersion: v1
-    created: 2019-09-13T11:50:46.006671478+02:00
+    created: 2020-04-09T16:24:55.782274+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: ff36dd21796f883a33fd1ab0ceea75f408db5e92c34fd3814695ad4d9cab91c3
     name: hdfs-k8s
@@ -203,7 +203,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.3.1.tgz
     version: 0.3.1
   - apiVersion: v1
-    created: 2019-09-13T11:50:46.00561145+02:00
+    created: 2020-04-09T16:24:55.77937+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: d682f24173914a598bc0ecb0fc461e5cafdc94985c2564395e00a11062fe7c54
     name: hdfs-k8s
@@ -211,7 +211,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
-    created: 2019-09-13T11:50:46.003902247+02:00
+    created: 2020-04-09T16:24:55.776096+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 94c5a987a3bc33bb0fb1a40e18b22bf6764812a029b58ac992c63ba4893f3b4d
     name: hdfs-k8s
@@ -219,7 +219,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v1
-    created: 2019-09-13T11:50:46.002617136+02:00
+    created: 2020-04-09T16:24:55.771784+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 1fe703fe927829474cf282846964e97bd1b427ce0ece4533c4dda8edfcefb55b
     name: hdfs-k8s
@@ -228,7 +228,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.001453025+02:00
+    created: 2020-04-09T16:24:55.768534+02:00
     description: An entry-point Helm chart for launching HDFS on Kubernetes
     digest: 297d0fb716efa86cc3aeb63ca32891d64dd71efa2eaf5a33f4bd0a3a02bad87d
     name: hdfs-k8s
@@ -238,7 +238,7 @@ entries:
   iotagent:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.009108471+02:00
+    created: 2020-04-09T16:24:55.78985+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 88b661cd076f613558fd285cbe1b7f3ac148ff903f3c0e3e1ec5926ecf864533
@@ -248,7 +248,7 @@ entries:
     version: 0.2.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.008827476+02:00
+    created: 2020-04-09T16:24:55.789045+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 3d917827e78d1436d67a267afbf8ebe6307bb4321105b2087543691e8681ba38
@@ -258,7 +258,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.008534119+02:00
+    created: 2020-04-09T16:24:55.788092+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: b91ddae10a87dff4386360cfd384fcf8e2baabc2eaf9b2be95be198fc896c5a5
@@ -268,7 +268,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.008271787+02:00
+    created: 2020-04-09T16:24:55.787271+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 8e617d0bd261d141a254cbd9f37fea2f7371edd6c02b68f0ef60d1fad2f7eae1
@@ -278,7 +278,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.008003981+02:00
+    created: 2020-04-09T16:24:55.786453+02:00
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 9510002cea77b66ca7ee76710feeee77335feca397c5f34f724bc503836938fe
@@ -288,7 +288,7 @@ entries:
     version: 0.1.0
   jupyterhub:
   - appVersion: 0.9.4
-    created: 2019-09-13T11:50:46.010245812+02:00
+    created: 2020-04-09T16:24:55.791768+02:00
     description: Multi-user Jupyter installation
     digest: ad78dc1e6876a79efb36a83ca81caf69fed1821314f67dee66011fdf3b567f5e
     home: https://z2jh.jupyter.org
@@ -302,10 +302,34 @@ entries:
     urls:
     - https://crs4.github.io/helm-charts/jupyterhub-0.8.1.tgz
     version: 0.8.1
+  nginx:
+  - apiVersion: v1
+    appVersion: 1.16.1
+    created: 2020-04-09T16:24:55.793345+02:00
+    description: Chart for the nginx server
+    digest: 92f6f776a63b94804734a22b4dacc4af1dcfb03ab4d5353c85d57301f4fb8139
+    engine: gotpl
+    home: http://www.nginx.org
+    icon: https://bitnami.com/assets/stacks/nginx/img/nginx-stack-220x234.png
+    keywords:
+    - nginx
+    - http
+    - web
+    - www
+    - reverse proxy
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: nginx
+    sources:
+    - https://github.com/bitnami/bitnami-docker-nginx
+    urls:
+    - https://crs4.github.io/helm-charts/nginx-5.3.0.tgz
+    version: 5.3.0
   orion:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: 2019-09-13T11:50:46.010948011+02:00
+    created: 2020-04-09T16:24:55.79858+02:00
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: 1e36fc2d3b9cdcf3c454afd1c28e418c7e4079fec2f714573dcce3e948dc6b6e
@@ -315,7 +339,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 2.0.0
-    created: 2019-09-13T11:50:46.010721602+02:00
+    created: 2020-04-09T16:24:55.796944+02:00
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: e0a5a5b7eb7647775267e7e7f079d7677dd8e48aec35a1734f2b046e3cd512f6
@@ -325,7 +349,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 2.0.0
-    created: 2019-09-13T11:50:46.010485465+02:00
+    created: 2020-04-09T16:24:55.795197+02:00
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: 06f61cc126f357daba4555d96a15416abb175cec9b3014625ff87afe6253ff16
@@ -336,7 +360,7 @@ entries:
   tdm-ingestion:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.011418304+02:00
+    created: 2020-04-09T16:24:55.803439+02:00
     description: A Helm chart for tdm-ingestion
     digest: bcfa1ba508e80da8c64c381e58fab3abacf0ff200f52f591fd7a2338b6cf1ca0
     name: tdm-ingestion
@@ -345,7 +369,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.011260914+02:00
+    created: 2020-04-09T16:24:55.801928+02:00
     description: A Helm chart for tdm-ingestion
     digest: 7094a285b1c2e74e4ad74771a32ecf6f422005bbd35ff3018958c7051b96f8ca
     name: tdm-ingestion
@@ -354,7 +378,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-09-13T11:50:46.011109186+02:00
+    created: 2020-04-09T16:24:55.800284+02:00
     description: A Helm chart for tdm-ingestion
     digest: 241c9ca28628eff757e1232f8839cb9682c187890f323e38d11fdae6995569a7
     name: tdm-ingestion
@@ -363,7 +387,7 @@ entries:
     version: 0.1.0
   tdmq:
   - apiVersion: v1
-    created: 2019-09-13T11:50:46.013703159+02:00
+    created: 2020-04-09T16:24:55.809391+02:00
     description: TDM query service
     digest: 0b7100eb5eacc461ee0869f73315e9998815cac5324319a4e65cbcc946671864
     name: tdmq
@@ -371,7 +395,7 @@ entries:
     - https://crs4.github.io/helm-charts/charts/tdmq-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
-    created: 2019-09-13T11:50:46.011790591+02:00
+    created: 2020-04-09T16:24:55.805266+02:00
     description: TDM query service
     digest: 1614c59af91c99a7b41a3a0012136ce182b35af84dba9d5ed42b89c26c70f7b3
     name: tdmq
@@ -381,7 +405,7 @@ entries:
   tdmq-db:
   - apiVersion: v1
     appVersion: 11.3.0-1
-    created: 2019-09-13T11:50:46.013200058+02:00
+    created: 2020-04-09T16:24:55.807745+02:00
     description: Chart for TDM's db. It is a customized version of the official PostgreSQL
       Helm chart.
     digest: 1b66ba66d2979151f0a2672313d8acbc348336ae91caf7022b68343e0a0c9086
@@ -397,4 +421,4 @@ entries:
     urls:
     - https://crs4.github.io/helm-charts/tdmq-db-0.0.1.tgz
     version: 0.0.1
-generated: 2019-09-13T11:50:45.992499077+02:00
+generated: 2020-04-09T16:24:55.729392+02:00
