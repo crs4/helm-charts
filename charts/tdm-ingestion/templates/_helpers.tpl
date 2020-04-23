@@ -55,6 +55,10 @@ Create chart name and version as used by the chart label.
     - {{ .Values.ckan.api_key }}
     - --ckan_dataset
     - {{ .Values.ckan.dataset }}
+    {{- if .Values.ckan.description }}
+    - --ckan_description
+    - {{ .Values.ckan.description }}
+    {{- end }}
     - --ckan_resource
     - {{ .Values.ckan.resource }}
     - --time_delta_before
