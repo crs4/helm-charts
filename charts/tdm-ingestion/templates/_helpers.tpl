@@ -66,6 +66,9 @@ Create chart name and version as used by the chart label.
     {{- if .Values.upsert }}
     - --upsert
     {{- end }}
+    {{- if .Values.prune }}
+    - --prune
+    {{- end }}
   {{- else }}
     - --bootstrap_server
     - {{.Values.bootstrap_server }}
