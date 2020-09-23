@@ -18,6 +18,12 @@ service:
 
 mongodb:
   url:
+  db:
+  user:
+  pwd:
+
+logging: 
+  level: ERROR
 
 subscriptions:
 #  git_repo: repo containing subscriptions yaml

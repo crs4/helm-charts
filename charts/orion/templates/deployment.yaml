@@ -23,7 +23,12 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          args: ["-dbhost", "{{ tpl .Values.mongodb.url . }}"]
+          {{- if .Values.mongodb.user }}
+          args: ["-dbhost", "{{ .Values.mongodb.url }}", "-db", "{{ .Values.mongodb.db }}",
+            "-dbuser", "{{ .Values.mongodb.user }}", "-dbpwd {{ .Values.mongodb.pwd }}", "-logLevel", "{{ .Values.logging.level }}"]
+          {{- else }}
+          args: ["-dbhost", "{{ .Values.mongodb.url }}", "-logLevel", "{{ .Values.logging.level }}"]
+          {{- end }}
           ports:
             - name: http
               protocol: TCP
