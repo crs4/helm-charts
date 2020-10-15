@@ -56,6 +56,9 @@ tolerations: []
 
 affinity: {}
 
+iota:
+  logLevel: 'INFO'
+
 mqtt:
   username:
   password:
