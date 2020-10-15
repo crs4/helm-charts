@@ -36,7 +36,7 @@ data:
     };
 
     config.iota = {
-        logLevel: 'DEBUG',
+        logLevel: '{{ .Values.iota.logLevel }}',
         contextBroker: {
             host: '{{ required "A orion host is required" .Values.orion.host }}',
             port: '{{ required "A orion port is required" .Values.orion.port }}'
