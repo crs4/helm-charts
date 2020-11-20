@@ -30,3 +30,24 @@ Create chart name and version as used by the chart label.
 {{- define "tdmq.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Return true if a secret object should be created
+*/}}
+{{- define "tdmq.createSecret" -}}
+{{- if .Values.existingSecret -}}
+{{- else -}}
+    {{- true -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
+Return tdmq.adminToken password
+*/}}
+{{- define "tdmq.adminToken" -}}
+{{- if .Values.conf.adminToken -}}
+    {{- .Values.conf.adminToken -}}
+{{- else -}}
+    {{- randAlphaNum 32 -}}
+{{- end -}}
+{{- end -}}

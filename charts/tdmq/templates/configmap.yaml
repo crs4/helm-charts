@@ -16,6 +16,7 @@ data:
         "vfs.s3.use_virtual_addressing": "false",
         "vfs.s3.use_multipart_upload": "false",
     }
+    AUTH_TOKEN = {{ tpl (required "Admin token is required" .Values.conf.adminToken | quote) . }}
 kind: ConfigMap
 metadata:
   name: {{ include "tdmq.fullname" . }}
