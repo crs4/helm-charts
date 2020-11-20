@@ -74,6 +74,8 @@ Create chart name and version as used by the chart label.
     - {{.Values.bootstrap_server }}
     - --topics
     - {{ .Values.topics }}
+    - --tdmq_auth_token
+    - {{ .Values.tdmq_auth_token }}
 
   {{- end }}
   resources:
