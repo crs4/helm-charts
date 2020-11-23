@@ -7,14 +7,16 @@ data:
     DB_PASSWORD = {{ tpl (required "dbPassword is required" .Values.conf.dbPassword | quote) . }}
     TILEDB_VFS_ROOT = {{ tpl (required "Storage root is required" .Values.conf.storageRoot | quote) . }}
     TILEDB_VFS_CONFIG = {
-        "vfs.s3.aws_access_key_id": {{ tpl (required "AWS access key is required" .Values.conf.awsAccessKey | quote) . }},
-        "vfs.s3.aws_secret_access_key": {{ tpl (required "AWS secret access key is required" .Values.conf.awsSecretAccessKey | quote) . }},
         "vfs.s3.endpoint_override": {{ tpl (required "S3 endpoint is required" .Values.conf.s3Endpoint | quote) . }},
         "vfs.s3.scheme": "http",
         "vfs.s3.region": "",
         "vfs.s3.verify_ssl": "false",
         "vfs.s3.use_virtual_addressing": "false",
         "vfs.s3.use_multipart_upload": "false",
+    }
+    TILEDB_VFS_CREDENTIALS = {
+        "vfs.s3.aws_access_key_id": {{ tpl (required "AWS access key is required" .Values.conf.awsAccessKey | quote) . }},
+        "vfs.s3.aws_secret_access_key": {{ tpl (required "AWS secret access key is required" .Values.conf.awsSecretAccessKey | quote) . }},
     }
     AUTH_TOKEN = {{ tpl (required "Admin token is required" .Values.conf.adminToken | quote) . }}
 kind: ConfigMap
