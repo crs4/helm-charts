@@ -1,0 +1,78 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "radar-ingestor.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "radar-ingestor.name" . }}
+    helm.sh/chart: {{ include "radar-ingestor.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  schedule: {{ .Values.schedule | quote }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: {{ .Chart.Name }}
+              image: "{{ required "a image repository is required" .Values.image.repository }}:{{ .Values.image.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              args:
+                - {{ .Values.script }}
+                {{- if .Values.debug }}
+                - -d
+                {{- end }}
+                {{- if .Values.dryrun }}
+                - --dryrun
+                {{- end }}
+                {{- if .Values.sync }}
+                - --sync
+                {{- else if .Values.hours }}
+                - --hours 
+                - {{ .Values.hours }}
+                {{- end }}
+                - --tdmq-url
+                - {{ .Values.tdmq_url }}
+                - --tdmq-auth-token
+                - {{ .Values.tdmq_auth_token }}
+                - --ssh-url
+                - {{ .Values.ssh_url }}
+                - --ssh-key
+                - {{ .Values.ssh_key }}
+                - --desc-file
+                - {{ .Values.desc_file }}
+              resources:
+                {{- toYaml .Values.resources | nindent 18 }}
+              env:
+                {{- toYaml .Values.env | nindent 18 }}
+              volumeMounts:
+                - name: ssh-secret-volume
+                  mountPath: /secrets/
+                  readOnly: true
+                - name: radar-config-volume
+                  mountPath: "/config"
+                  readOnly: true
+          # The secret data is exposed to Containers in the Pod through a Volume.
+          volumes:
+            - name: ssh-secret-volume
+              secret:
+                secretName: radar-ssh-auth
+            - name: radar-config-volume
+              configMap:
+                name: radar-config
+                items:
+                - key: "radar-desc.json"
+                  path: "radar-desc.json"
+
+          {{- with .Values.nodeSelector }}
+              nodeSelector:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
+            {{- with .Values.affinity }}
+              affinity:
+                {{- toYaml . | nindent 16 }}
+            {{- end }}
+            {{- with .Values.tolerations }}
+              tolerations:
+                {{- toYaml . | nindent 16 }}
+            {{- end }}

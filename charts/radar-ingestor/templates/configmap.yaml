@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: radar-config
+data:
+  radar-desc.json: |-
+    {{ .Values.radar_desc | nindent 4 }}
