@@ -76,7 +76,6 @@ Create chart name and version as used by the chart label.
     - {{ .Values.topics }}
     - --tdmq_auth_token
     - {{ .Values.tdmq_auth_token }}
-
   {{- end }}
   resources:
     {{- toYaml .Values.resources | nindent 12 }}
