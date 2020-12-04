@@ -5,6 +5,7 @@ data:
     DB_NAME = {{ tpl (required "dbName is required" .Values.conf.dbName | quote) . }}
     DB_USER = {{ tpl (required "dbUser is required" .Values.conf.dbUser | quote) . }}
     DB_PASSWORD = {{ tpl (required "dbPassword is required" .Values.conf.dbPassword | quote) . }}
+    LOG_LEVEL = {{ .Values.conf.logLevel | quote }}
     TILEDB_VFS_ROOT = {{ tpl (required "Storage root is required" .Values.conf.storageRoot | quote) . }}
     TILEDB_VFS_CONFIG = {
         "vfs.s3.endpoint_override": {{ tpl (required "S3 endpoint is required" .Values.conf.s3Endpoint | quote) . }},

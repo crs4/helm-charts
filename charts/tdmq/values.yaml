@@ -51,3 +51,4 @@ conf:
 #  dbName:
 #  dbUser:
 #  dbPassword:
+ logLevel: INFO
