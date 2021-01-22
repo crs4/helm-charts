@@ -166,6 +166,10 @@ spec:
           failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
         {{- end }}
         volumeMounts:
+        {{- if .Values.resources.shmOnEmptyDir.enabled }}
+        - name: dshm
+          mountPath: /dev/shm
+        {{- end }}
         {{- if .Values.usePasswordFile }}
         - name: postgresql-password
           mountPath: /opt/bitnami/postgresql/secrets/
@@ -184,6 +188,11 @@ spec:
           mountPath: /bitnami/postgresql/conf
         {{- end }}
       volumes:
+      {{- if .Values.resources.shmOnEmptyDir.enabled }}
+      - name: dshm
+        emptyDir:
+          medium: memory
+      {{- end }}
       {{- if .Values.usePasswordFile }}
       - name: postgresql-password
         secret:

@@ -288,6 +288,8 @@ slave:
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
 resources:
+  shmOnEmptyDir:
+    enabled: true
   requests:
     memory: 256Mi
     cpu: 250m
