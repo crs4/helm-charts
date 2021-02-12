@@ -6,7 +6,9 @@
 ## Current available global Docker image parameters: imageRegistry and imagePullSecrets
 ##
 global:
-  postgresql: {}
+  postgresql:
+    shmOnEmptyDir:
+      enabled: false
 #   imageRegistry: myRegistryName
 #   imagePullSecrets:
 #     - myRegistryKeySecretName
@@ -288,8 +290,6 @@ slave:
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
 resources:
-  shmOnEmptyDir:
-    enabled: true
   requests:
     memory: 256Mi
     cpu: 250m
