@@ -39,12 +39,17 @@ spec:
               mountPath: /etc/flask
           livenessProbe:
             httpGet:
-              path: /api/v0.0/
+              path: /api/v0.0/entity_types
               port: http
-          readinessProbe:
+            failureThreshold: 2
+            periodSeconds: 10
+          startupProbe:
             httpGet:
-              path: /api/v0.0/
+              path: /api/v0.0/entity_types
               port: http
+            failureThreshold: 10
+            initialDelaySeconds: 2
+            periodSeconds: 5
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
