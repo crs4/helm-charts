@@ -8,9 +8,18 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
 spec:
   schedule: {{ .Values.schedule | quote }}
+  {{- if .Values.spec.concurrencyPolicy }}
+  concurrencyPolicy: {{ .Values.spec.concurrencyPolicy }}
+  {{- end }}
+  {{- if .Values.spec.startingDeadlineSeconds }}
+  startingDeadlineSeconds: {{ .Values.spec.startingDeadlineSeconds }}
+  {{- end }}
   jobTemplate:
     spec:
       template:
+        metadata:
+          labels:
+            cron-job-semaphore: {{ .Values.semaphore | default .Chart.Name | quote }}
         spec:
           restartPolicy: OnFailure
           containers:
