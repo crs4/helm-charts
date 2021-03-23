@@ -8,12 +8,12 @@ data:
     LOG_LEVEL = {{ .Values.conf.logLevel | quote }}
     TILEDB_VFS_ROOT = {{ tpl (required "Storage root is required" .Values.conf.storageRoot | quote) . }}
     TILEDB_VFS_CONFIG = {
-        "vfs.s3.endpoint_override": {{ tpl (required "S3 endpoint is required" .Values.conf.s3Endpoint | quote) . }},
-        "vfs.s3.scheme": "http",
-        "vfs.s3.region": "",
-        "vfs.s3.verify_ssl": "false",
-        "vfs.s3.use_virtual_addressing": "false",
-        "vfs.s3.use_multipart_upload": "false",
+        {{- if not (hasKey .Values.conf.tiledbVfsConfig "vfs.s3.endpoint_override") }}
+          {{- fail "S3 endpoint is required" }}
+        {{- end }}
+        {{- range $k, $v := .Values.conf.tiledbVfsConfig }}
+        {{ $k | quote }}: {{ $v | quote }},
+        {{- end }}
     }
     TILEDB_VFS_CREDENTIALS = {
         "vfs.s3.aws_access_key_id": {{ tpl (required "AWS access key is required" .Values.conf.awsAccessKey | quote) . }},
