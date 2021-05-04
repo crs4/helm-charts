@@ -22,6 +22,17 @@ spec:
             cron-job-semaphore: {{ .Values.semaphore | default .Chart.Name | quote }}
         spec:
           restartPolicy: OnFailure
+          {{- if .Values.configFiles }}
+          volumes:
+            - name: {{ include "cron-job.fullname" . }}-volume
+              configMap:
+                name: {{ include "cron-job.fullname" . }}
+                items:
+                {{- range $i, $file := .Values.configFiles.files }}
+                  - key: {{ $file.name | quote }}
+                    path: {{ $file.name | quote }}
+                {{- end }}
+          {{- end }}
           containers:
             - name: {{ .Chart.Name }}
               image: "{{ required "a image repository is required" .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -32,7 +43,12 @@ spec:
                 {{- toYaml .Values.resources | nindent 18 }}
               env:
                 {{- toYaml .Values.env | nindent 18 }}
-
+              {{- if .Values.configFiles }}
+              volumeMounts:
+                - name: {{ include "cron-job.fullname" . }}-volume
+                  mountPath: {{ .Values.configFiles.configPath | default "/configs/" | quote }}
+                  readOnly: true
+              {{- end }}
           {{- with .Values.nodeSelector }}
               nodeSelector:
                 {{- toYaml . | nindent 16 }}

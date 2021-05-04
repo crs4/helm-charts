@@ -1,0 +1,11 @@
+{{- if .Values.configFiles -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "cron-job.fullname" . }}
+data:
+  {{- range $i, $file := .Values.configFiles.files }}
+  {{ $file.name }}:
+    {{ required "Content for configuration file is required" $file.content | quote }}
+  {{- end }}
+{{- end -}}
