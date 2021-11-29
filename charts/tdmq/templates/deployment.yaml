@@ -30,22 +30,24 @@ spec:
           env:
             - name: TDMQ_FLASK_CONFIG
               value: /etc/flask/config.py
-            {{ if .Values.gunicorn.cmdArgs }}
+            {{- with .Values.gunicorn -}}
+            {{- if .cmdArgs  }}
             - name: GUNICORN_CMD_ARGS
-              value: {{- .Values.gunicorn.cmdArgs -}}
-            {{ end }}
-            {{ if .Values.gunicorn.workers }}
+              value: {{ .cmdArgs }}
+            {{- end  }}
+            {{- if .workers }}
             - name: GUNICORN_WORKERS
-              value: {{ .Values.gunicorn.workers }}
-            {{ end }}
-            {{ if .Values.gunicorn.timeout }}
+              value: {{ .workers }}
+            {{- end }}
+            {{- if .timeout  }}
             - name: GUNICORN_TIMEOUT
-              value: {{ .Values.gunicorn.timeout }}
-            {{ end }}
-            {{ if .Values.gunicorn.log-level }}
+              value: {{ .timeout }}
+            {{- end }}
+            {{- if .log_level }}
             - name: GUNICORN_LOG_LEVEL
-              value: {{- .Values.gunicorn.log-level -}}
-            {{ end }}
+              value: {{ .log_level }}
+            {{- end -}}
+            {{- end }}
             - name: TDMQ_METRICS_PORT
               value: 9100
           ports:

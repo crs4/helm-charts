@@ -54,7 +54,7 @@ livenessProbe:
 gunicorn:
   workers:
   timeout:
-  log-level:
+  log_level:
   cmdArgs:
 
 conf:
