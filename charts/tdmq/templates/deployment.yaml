@@ -30,6 +30,8 @@ spec:
           env:
             - name: TDMQ_FLASK_CONFIG
               value: /etc/flask/config.py
+            - name: GUNICORN_CONFIG
+              value: /etc/flask/gunicorn.conf.py
           ports:
             - name: http
               containerPort: 8000
