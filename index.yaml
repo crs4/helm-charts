@@ -844,7 +844,15 @@ entries:
     version: 0.1.0
   tdmq:
   - apiVersion: v1
-    created: "2021-05-04T16:31:04.69615934+02:00"
+    created: "2021-11-29T08:48:33.95038119Z"
+    description: TDM query service
+    digest: 9d05d1eba6e1d67c52f9de99f42fa274e9678b75557d5a5092038472b1631f0e
+    name: tdmq
+    urls:
+    - https://crs4.github.io/helm-charts/tdmq-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v1
+    created: "2021-11-29T08:48:33.949640452Z"
     description: TDM query service
     digest: a571a087ca983de699f94972146d32ad7841021c9d7b35a235408bd24339d121
     name: tdmq
