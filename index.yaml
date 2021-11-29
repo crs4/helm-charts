@@ -3,7 +3,7 @@ entries:
   cron-job:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.842119476Z"
+    created: "2021-11-29T23:37:53.266204966Z"
     description: A Helm chart for Kubernetes which runs a cron job
     digest: 1a7389ca7aee9419247532e68d775224ea7873087388c3b1b974b23699d86688
     name: cron-job
@@ -12,7 +12,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.841651994Z"
+    created: "2021-11-29T23:37:53.265734208Z"
     description: A Helm chart for Kubernetes which runs a cron job
     digest: 87bc1cc3a538062e9bd9a6027967f8ad24f21ada5d9015c64eed70e63efb1be7
     name: cron-job
@@ -21,7 +21,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.841239375Z"
+    created: "2021-11-29T23:37:53.265263486Z"
     description: A Helm chart for Kubernetes which runs a cron job
     digest: f9121be359dc2ed990f0a4801ea529505e83f5b47c464b5352248870dbca42be
     name: cron-job
@@ -30,7 +30,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.840828904Z"
+    created: "2021-11-29T23:37:53.264827584Z"
     description: A Helm chart for Kubernetes which runs a cron job
     digest: 3ab003b7ae42c838aed8bdcf17a642d094a8f452bd8febd6aaca2d84d3ea8785
     name: cron-job
@@ -39,7 +39,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.840278321Z"
+    created: "2021-11-29T23:37:53.264311285Z"
     description: A Helm chart for Kubernetes which runs a cron job
     digest: 125a16b9655995aa58b4f4fe5665c3e6782c7e6564f1029cec47de341cab04f4
     name: cron-job
@@ -49,7 +49,7 @@ entries:
   cygnus:
   - apiVersion: v1
     appVersion: 1.9.0
-    created: "2021-11-29T09:25:21.844232512Z"
+    created: "2021-11-29T23:37:53.268129542Z"
     description: Cygnus is a Fiware connector in charge of persisting certain sources
       of data in certain configured third-party storages, creating a historical view
       of such data.
@@ -63,7 +63,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 1.9.0
-    created: "2021-11-29T09:25:21.843482354Z"
+    created: "2021-11-29T23:37:53.267524015Z"
     description: Cygnus is a Fiware connector in charge of persisting certain sources
       of data in certain configured third-party storages, creating a historical view
       of such data.
@@ -77,7 +77,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 1.9.0
-    created: "2021-11-29T09:25:21.842783469Z"
+    created: "2021-11-29T23:37:53.266898522Z"
     description: Cygnus is a Fiware connector in charge of persisting certain sources
       of data in certain configured third-party storages, creating a historical view
       of such data.
@@ -92,7 +92,7 @@ entries:
   datacube-db:
   - apiVersion: v1
     appVersion: 11.3.0-1
-    created: "2021-11-29T09:25:21.847752318Z"
+    created: "2021-11-29T23:37:53.270569125Z"
     description: Chart for TDM's datacube-db.
     digest: 867373f01fa39cc5d8a6dcf2776a2d2957731ec5d934c7367c17d9d104b545da
     keywords:
@@ -110,7 +110,7 @@ entries:
   drill:
   - apiVersion: v1
     appVersion: 1.14.0
-    created: "2021-11-29T09:25:21.848477765Z"
+    created: "2021-11-29T23:37:53.271300528Z"
     description: 'Drill: a Schema-free SQL Query Engine for Hadoop, NoSQL and Cloud
       Storage'
     digest: ea75abe46afee2e3a1c24b55607cdecfc42ed5cd8d1ac0770b2f7c75ced2fb11
@@ -121,7 +121,7 @@ entries:
   flink:
   - apiVersion: v1
     appVersion: 1.8.0
-    created: "2021-11-29T09:25:21.856609639Z"
+    created: "2021-11-29T23:37:53.280119087Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: c927f1c12a41cd512aa4cbc0262aafc42556b45e5b629b2cce17d3c0feb703c3
@@ -131,7 +131,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: 1.8.0
-    created: "2021-11-29T09:25:21.855327252Z"
+    created: "2021-11-29T23:37:53.279066735Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 23fd8e8af3410f074fc9df478c9c4ababbf9c795de22079948f240b00327e3d8
@@ -141,7 +141,7 @@ entries:
     version: 0.6.2
   - apiVersion: v1
     appVersion: 1.8.0
-    created: "2021-11-29T09:25:21.854235056Z"
+    created: "2021-11-29T23:37:53.278078791Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: ac6a0af24e744a4c2cec413bfaf4a42e80de64cef774ae641b2e9a72199db1fa
@@ -151,7 +151,7 @@ entries:
     version: 0.6.1
   - apiVersion: v1
     appVersion: 1.8.0
-    created: "2021-11-29T09:25:21.85316578Z"
+    created: "2021-11-29T23:37:53.277121956Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 6d46f148444d560141d27dac585df3080dc32fd2ea89e11b59337aa3fcb60a06
@@ -161,7 +161,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: "2021-11-29T09:25:21.852098814Z"
+    created: "2021-11-29T23:37:53.276146875Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 997b54a65783a3a50a3cb7be291885ece5db7fccccf9406eee4d1391dfe5e44e
@@ -171,7 +171,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: "2021-11-29T09:25:21.851351572Z"
+    created: "2021-11-29T23:37:53.275447602Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 8c3990cf529994e7686f2a61c822032f267e1be3cf50baa28222b7b4bb5c5b31
@@ -181,7 +181,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: "2021-11-29T09:25:21.850584771Z"
+    created: "2021-11-29T23:37:53.274722325Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: a6b9426bb4a1732a069fd80a7927575c561df97e13f1eee04d84e2c6f5657138
@@ -191,7 +191,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: "2021-11-29T09:25:21.849876753Z"
+    created: "2021-11-29T23:37:53.27392656Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 54ebb6a16ad51efa8adc0d6b246ed8c1dcffe2ac8af0b98088f4a28a2768fb80
@@ -201,7 +201,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 1.4.2
-    created: "2021-11-29T09:25:21.849166555Z"
+    created: "2021-11-29T23:37:53.272708853Z"
     description: Apache Flink is an open source stream processing framework developed
       by the Apache Software Foundation.
     digest: 4938399e7e4f4634dbaa6c9cae92cfbbabe258aff776cc18b114217ad78b84c5
@@ -212,7 +212,7 @@ entries:
   hadoop:
   - apiVersion: v1
     appVersion: 2.7.3
-    created: "2021-11-29T09:25:21.858309916Z"
+    created: "2021-11-29T23:37:53.281645152Z"
     description: The Apache Hadoop software library is a framework that allows for
       the distributed processing of large data sets across clusters of computers using
       simple programming models.
@@ -230,7 +230,7 @@ entries:
     version: 1.0.8
   hdfs-k8s:
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.888928072Z"
+    created: "2021-11-29T23:37:53.310808106Z"
     dependencies:
     - condition: condition.subchart.zookeeper
       name: zookeeper
@@ -296,7 +296,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.4.0.tgz
     version: 0.4.0
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.884421552Z"
+    created: "2021-11-29T23:37:53.306116145Z"
     dependencies:
     - condition: condition.subchart.zookeeper
       name: zookeeper
@@ -362,7 +362,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.3.1.tgz
     version: 0.3.1
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.878766152Z"
+    created: "2021-11-29T23:37:53.300687468Z"
     dependencies:
     - condition: condition.subchart.zookeeper
       name: zookeeper
@@ -428,7 +428,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.3.0.tgz
     version: 0.3.0
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.873912436Z"
+    created: "2021-11-29T23:37:53.296219212Z"
     dependencies:
     - condition: condition.subchart.zookeeper
       name: zookeeper
@@ -494,7 +494,7 @@ entries:
     - https://crs4.github.io/helm-charts/hdfs-k8s-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.869162393Z"
+    created: "2021-11-29T23:37:53.291692455Z"
     dependencies:
     - condition: condition.subchart.zookeeper
       name: zookeeper
@@ -561,7 +561,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.864247238Z"
+    created: "2021-11-29T23:37:53.286573273Z"
     dependencies:
     - condition: condition.subchart.zookeeper
       name: zookeeper
@@ -629,7 +629,7 @@ entries:
   iotagent:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.893766726Z"
+    created: "2021-11-29T23:37:53.31550415Z"
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 780bd279a2b0e0569640fa88d3a51e8c1781f075199e7aff1b66233e15327dc7
@@ -639,7 +639,7 @@ entries:
     version: 0.2.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.892923382Z"
+    created: "2021-11-29T23:37:53.31472032Z"
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 88b661cd076f613558fd285cbe1b7f3ac148ff903f3c0e3e1ec5926ecf864533
@@ -649,7 +649,7 @@ entries:
     version: 0.2.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.892094764Z"
+    created: "2021-11-29T23:37:53.313932425Z"
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 3d917827e78d1436d67a267afbf8ebe6307bb4321105b2087543691e8681ba38
@@ -659,7 +659,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.891307806Z"
+    created: "2021-11-29T23:37:53.313152571Z"
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: b91ddae10a87dff4386360cfd384fcf8e2baabc2eaf9b2be95be198fc896c5a5
@@ -669,7 +669,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.890471103Z"
+    created: "2021-11-29T23:37:53.312361263Z"
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 8e617d0bd261d141a254cbd9f37fea2f7371edd6c02b68f0ef60d1fad2f7eae1
@@ -679,7 +679,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.889704951Z"
+    created: "2021-11-29T23:37:53.311600933Z"
     description: An IoT Agent is a FIWARE component used to bridge between MQTT/HTTP+JSON
       based protocol IoT devices and the FIWARE NGSI standard used in FIWARE.
     digest: 9510002cea77b66ca7ee76710feeee77335feca397c5f34f724bc503836938fe
@@ -690,7 +690,7 @@ entries:
   jupyterhub:
   - apiVersion: v1
     appVersion: 0.9.4
-    created: "2021-11-29T09:25:21.898752969Z"
+    created: "2021-11-29T23:37:53.319151759Z"
     description: Multi-user Jupyter installation
     digest: ad78dc1e6876a79efb36a83ca81caf69fed1821314f67dee66011fdf3b567f5e
     home: https://z2jh.jupyter.org
@@ -706,7 +706,7 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: 1.16.1
-    created: "2021-11-29T09:25:21.900238393Z"
+    created: "2021-11-29T23:37:53.320955271Z"
     description: Chart for the nginx server
     digest: 92f6f776a63b94804734a22b4dacc4af1dcfb03ab4d5353c85d57301f4fb8139
     home: http://www.nginx.org
@@ -729,7 +729,7 @@ entries:
   orion:
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2021-11-29T09:25:21.902961883Z"
+    created: "2021-11-29T23:37:53.324077798Z"
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: 4c5e46eb7ed8ef07552e4cfb8b1c152e42600547df6493e20e46e7ee96f5df24
@@ -739,7 +739,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2021-11-29T09:25:21.902250478Z"
+    created: "2021-11-29T23:37:53.323402903Z"
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: 1e36fc2d3b9cdcf3c454afd1c28e418c7e4079fec2f714573dcce3e948dc6b6e
@@ -749,7 +749,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2021-11-29T09:25:21.901572416Z"
+    created: "2021-11-29T23:37:53.322769124Z"
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: e0a5a5b7eb7647775267e7e7f079d7677dd8e48aec35a1734f2b046e3cd512f6
@@ -759,7 +759,7 @@ entries:
     version: 0.1.1
   - apiVersion: v1
     appVersion: 2.0.0
-    created: "2021-11-29T09:25:21.900925581Z"
+    created: "2021-11-29T23:37:53.322043193Z"
     description: Orion is a C++ implementation of the NGSIv2 REST API binding developed
       as a part of the FIWARE platform.
     digest: 06f61cc126f357daba4555d96a15416abb175cec9b3014625ff87afe6253ff16
@@ -770,7 +770,7 @@ entries:
   radar-ingestor:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.903447177Z"
+    created: "2021-11-29T23:37:53.324580233Z"
     description: A Helm chart for TDM radar ingestor
     digest: 409bebf5e8e6d966df2152bc161acd67c93a31c844b2c9cd0d8a18c0fc9aaafe
     name: radar-ingestor
@@ -781,7 +781,7 @@ entries:
   tdm-ingestion:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.908055078Z"
+    created: "2021-11-29T23:37:53.327550361Z"
     description: A Helm chart for tdm-ingestion
     digest: 38ffc3c897617d1d8b909a7b71dbd70b51e5a5ea05e28457d5e57ad7885b9d36
     name: tdm-ingestion
@@ -790,7 +790,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.907608665Z"
+    created: "2021-11-29T23:37:53.327136737Z"
     description: A Helm chart for tdm-ingestion
     digest: 02df1c73e12d925390c24a7e00e3c6438d2f4646beb5809eea161813774bc38a
     name: tdm-ingestion
@@ -799,7 +799,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.907175069Z"
+    created: "2021-11-29T23:37:53.326738074Z"
     description: A Helm chart for tdm-ingestion
     digest: 3c05039f745fda78f293ef0b5da477be5f397a1c2a004616c4be1b3e42708ef4
     name: tdm-ingestion
@@ -808,7 +808,7 @@ entries:
     version: 0.2.3
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.906753636Z"
+    created: "2021-11-29T23:37:53.32631885Z"
     description: A Helm chart for tdm-ingestion
     digest: 4cbac7f78f9715f5ac90cf1dcc580dd5b29c0e250abad18496f326edc451f93a
     name: tdm-ingestion
@@ -817,7 +817,7 @@ entries:
     version: 0.2.2
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.90629775Z"
+    created: "2021-11-29T23:37:53.325885895Z"
     description: A Helm chart for tdm-ingestion
     digest: bcfa1ba508e80da8c64c381e58fab3abacf0ff200f52f591fd7a2338b6cf1ca0
     name: tdm-ingestion
@@ -826,7 +826,7 @@ entries:
     version: 0.2.1
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.904311668Z"
+    created: "2021-11-29T23:37:53.325446655Z"
     description: A Helm chart for tdm-ingestion
     digest: 7094a285b1c2e74e4ad74771a32ecf6f422005bbd35ff3018958c7051b96f8ca
     name: tdm-ingestion
@@ -835,7 +835,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-11-29T09:25:21.903891836Z"
+    created: "2021-11-29T23:37:53.325042626Z"
     description: A Helm chart for tdm-ingestion
     digest: 241c9ca28628eff757e1232f8839cb9682c187890f323e38d11fdae6995569a7
     name: tdm-ingestion
@@ -844,7 +844,15 @@ entries:
     version: 0.1.0
   tdmq:
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.913949391Z"
+    created: "2021-11-29T23:37:53.333159178Z"
+    description: TDM query service
+    digest: db5523496c3b8d4218d95b743a7fc84313cd282e4f8c474f3a294b6f8da5de1a
+    name: tdmq
+    urls:
+    - https://crs4.github.io/helm-charts/tdmq-0.6.2.tgz
+    version: 0.6.2
+  - apiVersion: v1
+    created: "2021-11-29T23:37:53.33244588Z"
     description: TDM query service
     digest: a6c6ee79ee6a598a1cf220b0f2f8d7601f2247befec26643db409ba59a0a0c42
     name: tdmq
@@ -852,7 +860,7 @@ entries:
     - https://crs4.github.io/helm-charts/tdmq-0.6.1.tgz
     version: 0.6.1
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.912946255Z"
+    created: "2021-11-29T23:37:53.331790292Z"
     description: TDM query service
     digest: 9d05d1eba6e1d67c52f9de99f42fa274e9678b75557d5a5092038472b1631f0e
     name: tdmq
@@ -860,7 +868,7 @@ entries:
     - https://crs4.github.io/helm-charts/tdmq-0.6.0.tgz
     version: 0.6.0
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.91195783Z"
+    created: "2021-11-29T23:37:53.331148237Z"
     description: TDM query service
     digest: a571a087ca983de699f94972146d32ad7841021c9d7b35a235408bd24339d121
     name: tdmq
@@ -868,7 +876,7 @@ entries:
     - https://crs4.github.io/helm-charts/tdmq-0.5.2.tgz
     version: 0.5.2
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.911107521Z"
+    created: "2021-11-29T23:37:53.330522556Z"
     description: TDM query service
     digest: f23fceb4d5608be174ceac1a9fbed9efd0bc04b381221cf4f812387ec9c433f0
     name: tdmq
@@ -876,7 +884,7 @@ entries:
     - https://crs4.github.io/helm-charts/tdmq-0.5.1.tgz
     version: 0.5.1
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.910485326Z"
+    created: "2021-11-29T23:37:53.32992185Z"
     description: TDM query service
     digest: b781e77e5d8488f9b66799e6abc5aeec02c1a31ab4f39376dc3fb7eab3fcd021
     name: tdmq
@@ -884,7 +892,7 @@ entries:
     - https://crs4.github.io/helm-charts/tdmq-0.5.0.tgz
     version: 0.5.0
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.909890292Z"
+    created: "2021-11-29T23:37:53.329322787Z"
     description: TDM query service
     digest: f6712887b5a011ae6cd23ded2ce35bd1cc5d385b5b4beee44b751b39224e11b7
     name: tdmq
@@ -892,7 +900,7 @@ entries:
     - https://crs4.github.io/helm-charts/tdmq-0.4.0.tgz
     version: 0.4.0
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.909270252Z"
+    created: "2021-11-29T23:37:53.328723025Z"
     description: TDM query service
     digest: 0b7100eb5eacc461ee0869f73315e9998815cac5324319a4e65cbcc946671864
     name: tdmq
@@ -900,7 +908,7 @@ entries:
     - https://crs4.github.io/helm-charts/tdmq-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
-    created: "2021-11-29T09:25:21.908687208Z"
+    created: "2021-11-29T23:37:53.328101597Z"
     description: TDM query service
     digest: 1614c59af91c99a7b41a3a0012136ce182b35af84dba9d5ed42b89c26c70f7b3
     name: tdmq
@@ -910,7 +918,7 @@ entries:
   tdmq-db:
   - apiVersion: v1
     appVersion: 11.3.0-1
-    created: "2021-11-29T09:25:21.920555131Z"
+    created: "2021-11-29T23:37:53.340176792Z"
     description: Chart for TDM's db. It is a customized version of the official PostgreSQL
       Helm chart.
     digest: a5a0df242f32175b9e3fa838be9bc660116c85c92232f639d29e799d8f32dcf0
@@ -928,7 +936,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: 11.3.0-1
-    created: "2021-11-29T09:25:21.918180694Z"
+    created: "2021-11-29T23:37:53.337824122Z"
     description: Chart for TDM's db. It is a customized version of the official PostgreSQL
       Helm chart.
     digest: d16f7445f98bdb0571e789ac8b8df7aa88d5b090459057cf70ba2fa468be4edf
@@ -946,7 +954,7 @@ entries:
     version: 0.1.0
   - apiVersion: v1
     appVersion: 11.3.0-1
-    created: "2021-11-29T09:25:21.916090141Z"
+    created: "2021-11-29T23:37:53.335762426Z"
     description: Chart for TDM's db. It is a customized version of the official PostgreSQL
       Helm chart.
     digest: 1b66ba66d2979151f0a2672313d8acbc348336ae91caf7022b68343e0a0c9086
@@ -962,4 +970,4 @@ entries:
     urls:
     - https://crs4.github.io/helm-charts/tdmq-db-0.0.1.tgz
     version: 0.0.1
-generated: "2021-11-29T09:25:21.839566624Z"
+generated: "2021-11-29T23:37:53.263520791Z"
