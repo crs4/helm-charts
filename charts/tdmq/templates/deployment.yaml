@@ -30,11 +30,32 @@ spec:
           env:
             - name: TDMQ_FLASK_CONFIG
               value: /etc/flask/config.py
-            - name: GUNICORN_CONFIG
-              value: /etc/flask/gunicorn.conf.py
+            {{- with .Values.gunicorn -}}
+            {{- if .cmdArgs  }}
+            - name: GUNICORN_CMD_ARGS
+              value: {{ .cmdArgs }}
+            {{- end  }}
+            {{- if .workers }}
+            - name: GUNICORN_WORKERS
+              value: {{ .workers }}
+            {{- end }}
+            {{- if .timeout  }}
+            - name: GUNICORN_TIMEOUT
+              value: {{ .timeout }}
+            {{- end }}
+            {{- if .log_level }}
+            - name: GUNICORN_LOG_LEVEL
+              value: {{ .log_level }}
+            {{- end -}}
+            {{- end }}
+            - name: TDMQ_METRICS_PORT
+              value: 9100
           ports:
             - name: http
               containerPort: 8000
+              protocol: TCP
+            - name: metrics
+              containerPort: 9100
               protocol: TCP
           volumeMounts:
             - name: flask-config
@@ -43,8 +64,9 @@ spec:
             httpGet:
               path: /api/v0.0/entity_types
               port: http
-            failureThreshold: 2
-            periodSeconds: 10
+            failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
           startupProbe:
             httpGet:
               path: /api/v0.0/entity_types
