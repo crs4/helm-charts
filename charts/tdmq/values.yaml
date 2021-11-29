@@ -51,10 +51,11 @@ conf:
 #  dbName:
 #  dbUser:
 #  dbPassword:
- logLevel: INFO
- tiledbVfsConfig:
-   vfs.s3.scheme: "http"
-   vfs.s3.region: ""
-   vfs.s3.verify_ssl: "false"
-   vfs.s3.use_virtual_addressing: "false"
-   vfs.s3.use_multipart_upload: "true"
+  logLevel: INFO
+  tiledbVfsConfig:
+    vfs.s3.scheme: "http"
+    vfs.s3.region: ""
+    vfs.s3.verify_ssl: "false"
+    vfs.s3.use_virtual_addressing: "false"
+    vfs.s3.use_multipart_upload: "true"
+  gunicorn: ""

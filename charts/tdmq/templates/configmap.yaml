@@ -20,6 +20,12 @@ data:
         "vfs.s3.aws_secret_access_key": {{ tpl (required "AWS secret access key is required" .Values.conf.awsSecretAccessKey | quote) . }},
     }
     AUTH_TOKEN = {{ tpl (required "Admin token is required" .Values.conf.adminToken | quote) . }}
+  gunicorn.conf.py: |
+    # Gunicorn configuration
+    {{- if .Values.conf.logLevel }}
+    logLevel = {{ (lower .Values.conf.logLevel) | quote }}
+    {{- end }}
+    {{ .Values.conf.gunicorn }}
 kind: ConfigMap
 metadata:
   name: {{ include "tdmq.fullname" . }}
