@@ -33,23 +33,23 @@ spec:
             {{- with .Values.gunicorn -}}
             {{- if .cmdArgs  }}
             - name: GUNICORN_CMD_ARGS
-              value: {{ .cmdArgs }}
+              value: {{ .cmdArgs | quote }}
             {{- end  }}
             {{- if .workers }}
             - name: GUNICORN_WORKERS
-              value: {{ .workers }}
+              value: {{ .workers | quote }}
             {{- end }}
             {{- if .timeout  }}
             - name: GUNICORN_TIMEOUT
-              value: {{ .timeout }}
+              value: {{ .timeout | quote }}
             {{- end }}
             {{- if .log_level }}
             - name: GUNICORN_LOG_LEVEL
-              value: {{ .log_level }}
+              value: {{ .log_level | quote }}
             {{- end -}}
             {{- end }}
             - name: TDMQ_METRICS_PORT
-              value: 9100
+              value: "9100"
           ports:
             - name: http
               containerPort: 8000
