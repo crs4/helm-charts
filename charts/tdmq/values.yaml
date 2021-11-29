@@ -46,6 +46,11 @@ tolerations: []
 
 affinity: {}
 
+livenessProbe:
+  failureThreshold: 6
+  periodSeconds: 10
+  timeoutSeconds: 5
+
 conf:
 #  dbHost:
 #  dbName:

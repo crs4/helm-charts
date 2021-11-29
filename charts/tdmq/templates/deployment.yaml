@@ -43,8 +43,9 @@ spec:
             httpGet:
               path: /api/v0.0/entity_types
               port: http
-            failureThreshold: 2
-            periodSeconds: 10
+            failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
           startupProbe:
             httpGet:
               path: /api/v0.0/entity_types
