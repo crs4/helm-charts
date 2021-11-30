@@ -96,6 +96,10 @@ spec:
         - name: data
           mountPath: {{ .Values.persistence.mountPath }}
           subPath: {{ .Values.persistence.subPath }}
+        {{- if or (.Files.Glob "files/conf.d/*.conf") .Values.postgresqlExtendedConf .Values.extendedConfConfigMap }}
+        - name: postgresql-extended-config
+          mountPath: /bitnami/postgresql/conf/conf.d/
+        {{- end }}
         env:
         - name: START_DB
           value: "false"
