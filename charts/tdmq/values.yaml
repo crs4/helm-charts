@@ -63,7 +63,7 @@ conf:
 #  dbUser:
 #  dbPassword:
   logLevel: INFO
-  tiledbVfsConfig:
+  internalVfs:
     vfs.s3.scheme: "http"
     vfs.s3.region: ""
     vfs.s3.verify_ssl: "false"

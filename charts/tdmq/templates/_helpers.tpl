@@ -51,3 +51,26 @@ Return tdmq.adminToken password
     {{- randAlphaNum 32 -}}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Generate a vfs configuration dictionary
+*/}}
+{{- define "tdmq.vfsConfig" -}}
+{
+'storage.root': {{ required "Storage root is required" .storageRoot | quote }},
+'config': {
+  {{- if not (hasKey . "vfs.s3.endpoint_override") -}}
+    {{- fail "S3 endpoint is required" -}}
+  {{- end -}}
+  {{- range $k, $v := . }}
+  {{- if (or (hasPrefix "vfs" $k) (hasPrefix "sm" $k)) }}
+  {{ $k | quote }}: {{ $v | quote }},
+  {{- end }}
+  {{- end -}}
+},
+'credentials': {
+  "vfs.s3.aws_access_key_id": {{ required "AWS access key for internal VFS is required" .awsAccessKey | quote }},
+  "vfs.s3.aws_secret_access_key": {{ required "AWS secret access key for internal VFS is required" .awsSecretAccessKey | quote }},
+  }
+}
+{{- end -}}
