@@ -7,6 +7,9 @@ data:
     DB_USER = {{ tpl (required "dbUser is required" .Values.conf.dbUser | quote) . }}
     DB_PASSWORD = {{ tpl (required "dbPassword is required" .Values.conf.dbPassword | quote) . }}
     LOG_LEVEL = {{ .Values.conf.logLevel | quote }}
+    {{ if .Values.conf.anonymizer_db -}}
+    LOC_ANONYMIZER_DB = {{ .Values.conf.anonymizer_db | quote }}
+    {{ end }}
 
 {{- with .Values.conf -}}
     {{- if not .internalVfs -}}
