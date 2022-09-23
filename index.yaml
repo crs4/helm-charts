@@ -844,7 +844,15 @@ entries:
     version: 0.1.0
   tdmq:
   - apiVersion: v1
-    created: "2021-12-03T21:03:37.275835258+01:00"
+    created: "2022-09-23T16:17:08.604863058+02:00"
+    description: TDM query service
+    digest: 8aa47cc54c02e1e259b147566f52f4ef2e55f049f6b8606b8b6f1103ba078bb2
+    name: tdmq
+    urls:
+    - tdmq-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v1
+    created: "2022-09-23T16:17:08.604187479+02:00"
     description: TDM query service
     digest: 653f5f02217213303d61003e821135738c0e81574e5f519a306b52df91f24bc0
     name: tdmq
